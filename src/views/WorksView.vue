@@ -23,7 +23,7 @@ export default {
         class="mb-2 w-100"
         :to="`/`"> HOME
     </b-button>
-    <h1>{{fixtures.{{work_type}}}</h1>
+    <!-- <h1>{{fixtures.{{work_type}}</h1> -->
     <b-row>
         <b-card v-for="fixture in selectedFixture" >
           <div class ="card-body">
