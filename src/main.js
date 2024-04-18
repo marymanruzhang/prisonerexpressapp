@@ -1,5 +1,6 @@
 
 import ExploreFixtures from './ExploreFixtures.json';
+import Explore2Fixtures from './Explore2Fixtures.json';
 import ArtFixtures from './ArtFixtures.json';
 import PoetryFixtures from './PoetryFixtures.json';
 import EssayFixtures from './EssayFixtures.json';
@@ -22,6 +23,7 @@ app.use(router)
 app.use(createBootstrap({ components: true, directives: true }))
 app.config.globalProperties.fixtures = {
     explore: ExploreFixtures,
+    explore2: Explore2Fixtures,
     art: ArtFixtures,
     poetry: PoetryFixtures,
     essay: EssayFixtures,

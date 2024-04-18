@@ -1,16 +1,4 @@
 {
-  "archive": {
-      "name": "Online Archive",
-      "description": "Access our comprehensive archive of materials."
-    },
-    "newsletter": {
-      "name": "Newsletter",
-      "description": "Read the latest and past issues of our newsletter."
-    },
-    "education": {
-      "name": "Education",
-      "description": "Explore educational resources and programs."
-    },
     "journal": {
       "name": "Journals",
       "description": "Browse personal journals from our participants."

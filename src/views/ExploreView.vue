@@ -2,17 +2,23 @@
   <div class="explore-container">
     <h1>Explore Prison Express</h1>
     <div class="tiles">
+      <b-button v-for="(item) in fixtures.explore2" :key="item.name" class="tile" @click="goToDetail(item.name)">
+        <h3>{{item.name}}</h3>
+        <p>{{item.description }}</p>
+      </b-button>
+
       <b-button v-for="(item, work_type) in fixtures.explore" :key="item.name" class="tile" @click="goToDetail(item.name)"
       :to = "`/works/${work_type}`">
         <h3>{{ item.name}}</h3>
         <p>{{ item.description }}</p>
       </b-button>
+      
     </div>
   </div>
 </template>
 
 <script setup>
-import { computed } from 'vue';
+// import { computed } from 'vue';
 // import ExploreFixtures from '@/ExploreFixtures.json';
 
 // const exploreItems = computed(() => ExploreFixtures);
