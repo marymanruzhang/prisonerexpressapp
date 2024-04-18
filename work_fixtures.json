@@ -1,0 +1,16 @@
+{
+    "mona-lisa": {
+        "title": "Mona Lisa",
+        "img": "mona.jpg",
+        "author": "Leonardo Divinci",
+        "date": "01/30/2004",
+        "Newsletter": "January 2004"
+    },
+    "starry-night": {
+        "title": "Starry Night",
+        "img": "starry.jpg",
+        "author": "Leonardo Divinci",
+        "date": "03/10/2001",
+        "Newsletter": "March 2001"
+    }
+}
