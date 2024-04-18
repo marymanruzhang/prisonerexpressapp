@@ -1,0 +1,30 @@
+[
+    {
+      "name": "Online Archive",
+      "description": "Access our comprehensive archive of materials."
+    },
+    {
+      "name": "Newsletter",
+      "description": "Read the latest and past issues of our newsletter."
+    },
+    {
+      "name": "Education",
+      "description": "Explore educational resources and programs."
+    },
+    {
+      "name": "Journals",
+      "description": "Browse personal journals from our participants."
+    },
+    {
+      "name": "Essays",
+      "description": "Explore a collection of essays written by inmates."
+    },
+    {
+      "name": "Poetry",
+      "description": "Read poetry written by our community members."
+    },
+    {
+      "name": "Arts",
+      "description": "Discover artworks created by our participants."
+    }
+  ]

@@ -1,5 +1,5 @@
 
-// import fixtures from './fixtures.json'
+import ExploreFixtures from './ExploreFixtures.json'
 
 // main.js/ts
 import { createApp } from 'vue'
@@ -16,7 +16,7 @@ import router from './router'
 const app = createApp(App)
 app.use(router)
 app.use(createBootstrap({ components: true, directives: true }))
-// app.config.globalProperties.fixtures = fixtures;
-// app.config.globalProperties.baseDir = import.meta.env.BASE_URL;
+app.config.globalProperties.fixtures = ExploreFixtures;
+app.config.globalProperties.baseDir = import.meta.env.BASE_URL;
 
 app.mount('#app')
