@@ -21,7 +21,11 @@ export default {
         class="mb-2 w-100"
         :to="`/`"> HOME
     </b-button>
+<<<<<<< HEAD
 
+=======
+    <!-- <h1>{{fixtures.{{work_type}}</h1> -->
+>>>>>>> origin/main
     <b-row>
         <b-card v-for="fixture in Object.values(Object.fromEntries(Object.entries(fixtures).filter(([key, value]) => key === this.work_type)))[0]" >
 
