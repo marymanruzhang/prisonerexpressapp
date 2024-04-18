@@ -26,6 +26,7 @@
 // router/index.js
 import { createRouter, createWebHistory } from 'vue-router';
 import ExploreView from '@/views/ExploreView.vue';
+import WorksView from '@/views/WorksView.vue';
 
 const routes = [
   {
@@ -34,6 +35,7 @@ const routes = [
     component: ExploreView
   },
   // Other routes can be added here
+  { path: '/works/:work_type', name: 'works', component: WorksView, props: true }
 ];
 
 const router = createRouter({

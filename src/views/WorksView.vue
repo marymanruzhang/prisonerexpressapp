@@ -1,20 +1,19 @@
 <script>
-// export default {
-//   data() {
-//     return {
-//       current_work: NULL
-//     };
-//   },
-//   methods: {
-//     showcase(work_id) {
-//       this.current_work = work_id;
-//     },
-//     exit() {
-//         this.current_work = NULL;
-//     }
-//   }
-// }
+export default {
+  props: {
+    work_type: {
+      type: String,
+      required: true
+    }
+ },
+ methods: {
+  selectedFixture() {
+    return fixtures[this.work_type];
+    }
+  }
+};
 </script>
+
 
 
 <template>
@@ -24,24 +23,17 @@
         class="mb-2 w-100"
         :to="`/`"> HOME
     </b-button>
+    <h1>{{fixtures.{{work_type}}}</h1>
     <b-row>
-        <!-- <b-card >
-            <h3 class="card-title text-center">Title </h3>
-            <b-card>img here</b-card>
-            <h6 class="card-text">Created by </h6>
-            <h6>01/01/2001</h6>
-            <h6>Newsletter March 2001</h6>
-        </b-card> -->
-
-        <b-card>
+        <b-card v-for="fixture in selectedFixture" >
           <div class ="card-body">
             <b-row>
-            <b-col> <b-card>img here</b-card> </b-col>
+            <b-col> <img :src="`${baseDir}images/${fixture['img']}`" ></b-col>
             <b-col>
-            <h3 class="card-title text-right">Title </h3>
-            <h6 class="card-text">Created by </h6>
-            <h6>01/01/2001</h6>
-            <h6>Newsletter March 2001</h6>
+            <h3 class="card-title text-right"> {{fixture["title"]}} </h3>
+            <h6 class="card-text">by: {{fixture["author"]}} </h6>
+            <h6>Created on: {{fixture["date"]}}</h6>
+            <h6>Featured in {{fixture["newsletter"]}} Newsletter</h6>
             </b-col>
         </b-row>
 

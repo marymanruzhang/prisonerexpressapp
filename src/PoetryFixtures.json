@@ -1,0 +1,16 @@
+{
+    "mona-lisa": {
+        "title": "poem 1",
+        "img": "mona.jpg",
+        "author": "poet 1",
+        "date": "01/30/2004",
+        "newsletter": "January 2004"
+    },
+    "starry-night": {
+        "title": "poem 2",
+        "img": "starry.jpg",
+        "author": "poet2",
+        "date": "03/10/2001",
+        "newsletter": "March 2001"
+    }
+}

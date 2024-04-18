@@ -2,19 +2,20 @@
   <div class="explore-container">
     <h1>Explore Prison Express</h1>
     <div class="tiles">
-      <div v-for="item in exploreItems" :key="item.name" class="tile" @click="goToDetail(item.name)">
-        <h3>{{ item.name }}</h3>
+      <b-button v-for="(item, work_type) in fixtures.explore" :key="item.name" class="tile" @click="goToDetail(item.name)"
+      :to = "`/works/${work_type}`">
+        <h3>{{ item.name}}</h3>
         <p>{{ item.description }}</p>
-      </div>
+      </b-button>
     </div>
   </div>
 </template>
 
 <script setup>
 import { computed } from 'vue';
-import ExploreFixtures from '@/ExploreFixtures.json';
+// import ExploreFixtures from '@/ExploreFixtures.json';
 
-const exploreItems = computed(() => ExploreFixtures);
+// const exploreItems = computed(() => ExploreFixtures);
 
 function goToDetail(name) {
   // You can expand this function to navigate to a detail view or perform other actions
