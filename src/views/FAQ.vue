@@ -10,6 +10,9 @@
   <BAccordionItem title="What does prisoner express do?" visible>
     <strong>What does prisoner express do?</strong> Hello!!
   </BAccordionItem>
+  <BAccordionItem title="How does Prisoner Express programs operates?" visible>
+    Currently, we offer up to <strong> 9 programs in every 6-month cycle</strong>, and each program has between 500 to 900 participants. It makes for a continually growing photocopying and postage bill.
+  </BAccordionItem>
   <BAccordionItem title="How to access current programs?">
     <strong>How to access current programs?</strong> Hello!!!
   </BAccordionItem>
@@ -31,7 +34,7 @@
     .BAccordian {
         height: 100vh;
         width: 100vw;
-    margin: 0;
+        margin: 0;
     }
 
 </style>>
