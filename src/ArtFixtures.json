@@ -1,16 +1,23 @@
 {
-    "mona-lisa": {
-        "title": "Mona Lisa",
-        "img": "mona.jpg",
-        "author": "Leonardo Divinci",
-        "date": "01/30/2004",
-        "newsletter": "January 2004"
+    "art1": {
+        "title": "1",
+        "img": "art1.png",
+        "author": "William Hill",
+        "date": null,
+        "newsletter": "Spring 2017 Prisoner Express Art Show"
     },
-    "starry-night": {
-        "title": "Starry Night",
-        "img": "starry.jpg",
-        "author": "Leonardo Divinci",
-        "date": "03/10/2001",
-        "newsletter": "March 2001"
+    "art2": {
+        "title": "2",
+        "img": "art2.png",
+        "author": "William Hill",
+        "date": null,
+        "newsletter": "Spring 2017 Prisoner Express Art Show"
+    },
+    "art3": {
+        "title": "3",
+        "img": "art3.png",
+        "author": "Timothy Owens",
+        "date": null,
+        "newsletter": "Spring 2017 Prisoner Express Art Show"
     }
 }

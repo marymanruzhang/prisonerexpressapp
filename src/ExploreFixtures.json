@@ -11,11 +11,11 @@
       "name": "Education",
       "description": "Explore educational resources and programs."
     },
-    "journals": {
+    "journal": {
       "name": "Journals",
       "description": "Browse personal journals from our participants."
     },
-    "essays": {
+    "essay": {
       "name": "Essays",
       "description": "Explore a collection of essays written by inmates."
     },

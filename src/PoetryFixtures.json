@@ -1,16 +1,26 @@
 {
-    "mona-lisa": {
-        "title": "poem 1",
-        "img": "mona.jpg",
-        "author": "poet 1",
-        "date": "01/30/2004",
-        "newsletter": "January 2004"
+    "poem28": {
+        "title": "Poetry Anthology #28",
+        "img": "poetry28.png",
+        "author": "Lee Cotman",
+        "date": "February 29, 2024",
+        "newsletter": null,
+        "pdf": "https://prisonerexpress.org/wp-content/uploads/2024/02/PP28-final.pdf"
     },
-    "starry-night": {
-        "title": "poem 2",
-        "img": "starry.jpg",
-        "author": "poet2",
-        "date": "03/10/2001",
-        "newsletter": "March 2001"
+    "poem27": {
+        "title": "Poetry Anthology #27",
+        "img": "poetry27.png",
+        "author": "Gary Fine",
+        "date": "April 3, 2023",
+        "newsletter": null,
+        "pdf": "https://prisonerexpress.org/wp-content/uploads/2023/04/PP-27-to-print.pdf"
+    },
+    "poem26": {
+        "title": "Poetry Anthology #26",
+        "img": "poetry26.png",
+        "author": "Gary Fine",
+        "date": "November 15, 2022",
+        "newsletter": null,
+        "pdf": "https://prisonerexpress.org/wp-content/uploads/2022/11/PP26-Final-1.pdf"
     }
 }
