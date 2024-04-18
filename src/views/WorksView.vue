@@ -6,12 +6,10 @@ export default {
       required: true
     }
  },
- methods: {
-  selectedFixture() {
-    return fixtures[this.work_type];
-    }
-  }
 };
+
+// const json = Object.values(Object.fromEntries(Object.entries(fixtures).filter(([key, value]) => key === this.work_type)))[0]
+
 </script>
 
 
@@ -23,9 +21,10 @@ export default {
         class="mb-2 w-100"
         :to="`/`"> HOME
     </b-button>
-    <h1>{{fixtures.{{work_type}}}</h1>
+
     <b-row>
-        <b-card v-for="fixture in selectedFixture" >
+        <b-card v-for="fixture in Object.values(Object.fromEntries(Object.entries(fixtures).filter(([key, value]) => key === this.work_type)))[0]" >
+
           <div class ="card-body">
             <b-row>
             <b-col> <img :src="`${baseDir}images/${fixture['img']}`" ></b-col>

@@ -18,7 +18,7 @@ import router from './router'
 const app = createApp(App)
 app.use(router)
 app.use(createBootstrap({ components: true, directives: true }))
-app.config.globalProperties.fixtures ={
+app.config.globalProperties.fixtures = {
     explore: ExploreFixtures,
     art: ArtFixtures,
     poetry: PoetryFixtures
