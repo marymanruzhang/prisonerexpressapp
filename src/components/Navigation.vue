@@ -1,5 +1,5 @@
 <template>
-    <b-container>
+    <b-container class="fixed-bottom">
         <b-row>
             <b-navbar class="list-unstyled" >
                 <b-col>
