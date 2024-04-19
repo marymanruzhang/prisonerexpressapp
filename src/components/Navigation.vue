@@ -1,5 +1,5 @@
 <template>
-    <b-container class="fixed-bottom">
+    <b-container class="fixed-bottom bottom-navbar">
         <b-row>
             <b-navbar class="list-unstyled" >
                 <b-col>
@@ -23,5 +23,7 @@
 </template>
 
 <style scoped>
-
+    .bottom-navbar {
+        max-height: 100px;
+    }
 </style>
