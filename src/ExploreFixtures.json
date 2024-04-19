@@ -1,0 +1,18 @@
+{
+    "journal": {
+      "name": "Journals",
+      "description": "Browse personal journals from our participants."
+    },
+    "essay": {
+      "name": "Essays",
+      "description": "Explore a collection of essays written by inmates."
+    },
+    "poetry": {
+      "name": "Poetry",
+      "description": "Read poetry written by our community members."
+    },
+    "art": {
+      "name": "Arts",
+      "description": "Discover artworks created by our participants."
+    }
+}
