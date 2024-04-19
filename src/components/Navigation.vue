@@ -3,7 +3,7 @@
         <b-row>
             <b-navbar class="list-unstyled" >
                 <b-col>
-                    <b-nav-item mx-3>
+                    <b-nav-item to= "/">
                         <BImg src="./icons/mag_glass_icon.png" fluid />
                     </b-nav-item>
                 </b-col>
