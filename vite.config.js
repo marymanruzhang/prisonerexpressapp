@@ -5,6 +5,7 @@ import Components from 'unplugin-vue-components/vite';
 import { BootstrapVueNextResolver } from 'unplugin-vue-components/resolvers';
 
 export default defineConfig({
+  base: './',
   plugins: [
     vue(),
     Components({
@@ -15,5 +16,11 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
+  },
+  server: {
+    host: '127.0.0.1'
   }
 });
+
+
+
