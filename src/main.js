@@ -33,4 +33,7 @@ app.config.globalProperties.fixtures = {
 
 app.config.globalProperties.baseDir = import.meta.env.BASE_URL;
 
+import fixtures from './fixtures.json'
+app.config.globalProperties.fixtures = fixtures;
+app.config.globalProperties.baseDir = import.meta.env.BASE_URL;
 app.mount('#app')
