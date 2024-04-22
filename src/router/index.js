@@ -1,10 +1,9 @@
-
-import { createRouter, createWebHistory } from 'vue-router';
+import { createRouter, createWebHistory } from 'vue-router'
 import ExploreView from '@/views/ExploreView.vue';
 import WorksView from '@/views/WorksView.vue';
 import Programs from '@/views/Programs.vue';
 import Saved from '@/views/Saved.vue';
-
+import FAQ from '../views/FAQ.vue'
 
 const routes = [
   {
@@ -22,6 +21,11 @@ const routes = [
     name: 'saved',
     component: Saved
   },
+  {
+    path: '/',
+    name: 'FAQ',
+    component: FAQ
+  },
   // Other routes can be added here
   { path: '/works/:work_type', name: 'works', component: WorksView, props: true },
 
@@ -30,6 +34,7 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes
+
 });
 
 export default router;
