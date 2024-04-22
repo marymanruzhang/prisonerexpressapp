@@ -5,6 +5,7 @@ import ArtFixtures from './ArtFixtures.json';
 import PoetryFixtures from './PoetryFixtures.json';
 import EssayFixtures from './EssayFixtures.json';
 import JournalFixtures from './JournalFixtures.json';
+import faqFixtures from './faqFixtures.json';
 
 
 // main.js/ts
@@ -27,7 +28,8 @@ app.config.globalProperties.fixtures = {
     art: ArtFixtures,
     poetry: PoetryFixtures,
     essay: EssayFixtures,
-    journal: JournalFixtures
+    journal: JournalFixtures,
+    faq: faqFixtures
 
 };
 
