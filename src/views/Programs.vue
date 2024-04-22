@@ -8,7 +8,13 @@
               <p class="name">{{ item.name }}</p>
               <p class="description">{{ item.description }}</p>
             </b-card-text>
-                <img class="save" @click="toggleSave(item)" :src="isSaved(item.name) ? '/images/saved2.png' : '/images/saved2.png'" alt="Save" />
+            <img class="save" @click="toggleSave(item)"
+                 :src="isSaved(item.name) ? '/images/saved2_active.png' : '/images/saved2.png'" alt="Save" />
+            <transition name="fade">
+              <p class="save-message" v-if="showSaveMessage && currentSaving === item.name">
+                Saved!
+              </p>
+            </transition>
           </b-card>
         </b-col>
       </b-row>
@@ -16,34 +22,42 @@
   </div>
 </template>
 
+
 <script>
 export default {
   data() {
     return {
       savedPrograms: [],
+      showSaveMessage: false,
+      currentSaving: '',
     };
   },
   methods: {
-  toggleSave(item) {
-    const index = this.savedPrograms.findIndex(p => p.name === item.name);
-    if (index === -1) {
-      this.savedPrograms.push(item);
-    } else {
-      this.savedPrograms.splice(index, 1);
-    }
-    localStorage.setItem('savedPrograms', JSON.stringify(this.savedPrograms));
-  },
-  isSaved(programName) {
-    return this.savedPrograms.some(p => p.name === programName);
+    toggleSave(item) {
+      const index = this.savedPrograms.findIndex(p => p.name === item.name);
+      if (index === -1) {
+        this.savedPrograms.push(item);
+        this.showSaveMessage = true;
+        this.currentSaving = item.name;
+        setTimeout(() => {
+          this.showSaveMessage = false;
+          this.currentSaving = '';
+        }, 2000);
+      } else {
+        this.savedPrograms.splice(index, 1);
+      }
+      localStorage.setItem('savedPrograms', JSON.stringify(this.savedPrograms));
+    },
+    isSaved(programName) {
+      return this.savedPrograms.some(p => p.name === programName);
+    },
   },
   mounted() {
-    // Load saved programs from localStorage on component mount
     const saved = localStorage.getItem('savedPrograms');
     if (saved) {
       this.savedPrograms = JSON.parse(saved);
     }
   }
-}
 }
 </script>
 
@@ -57,21 +71,24 @@ export default {
   padding: 20px;
   justify-content: center;
   background-color: #F5F5DC;
-;
 }
 
-
 .save {
-  background-color: #FFFFFF;
-  color: black;
-  border: none;
+  color: red;
+  cursor: pointer;
   position: absolute;
   bottom: 10px;
   right: 38px;
-  width: 30px; /* Adjust the width of the save icon */
+  width: 30px;
+  transition: filter 0.3s;
+}
+
+.save:hover {
+  filter: brightness(120%);
 }
 
 .program {
+  position: relative;
   max-width: 350px;
   height: 550px;
   padding: 50px;
@@ -91,5 +108,20 @@ export default {
   font-size: 15px;
 }
 
+.save-message {
+  position: absolute;
+  bottom: 25px;
+  right: 50px;
+  color: green;
+  font-size: 18px;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.5s;
+}
+
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
 
 </style>

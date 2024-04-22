@@ -12,12 +12,12 @@
     "essays": {
         "name": "Essays",
         "img": "contract.png",
-        "description": "Writers are given a Word Theme and a Picture Theme and encouraged to submit writing for each theme. They also receive a newsletter with all the writing for that month."
+        "description": "Writers are given a Word Theme and a Picture Theme and encouraged to submit writing for each theme."
     },
     "art": {
         "name": "Art",
         "img": "art.png",
-        "description": "Offers the opportunity to explore the arts, led by Treacy Ziegler. Work may be showcased in public art exhibitions!"
+        "description": "Offers the opportunity to explore the arts. Work may be showcased in public art exhibitions!"
     },
     "education": {
         "name": "Education",
@@ -28,6 +28,6 @@
     "newsletter": {
         "name": "Newsletter",
         "img": "newspaper.png",
-        "description": "Contains selected work submitted by participants from the previous programming cycle and explains how new members can contribute to Prisoner Express."
+        "description": "Includes participant submissions and guides new members on how to contribute to Prisoner Express."
     }
 }
