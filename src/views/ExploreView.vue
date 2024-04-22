@@ -1,6 +1,6 @@
 <template>
   <div class="explore-container">
-    <h1>Explore Prison Express</h1>
+    <p class = "h1">Explore Prison Express</p>
     <div class="tiles">
       <!-- <b-button v-for="(item) in fixtures.explore2" :key="item.name" class="tile" @click="goToDetail(item.name)">
         <h3>{{ item.name }}</h3>
@@ -41,7 +41,7 @@ html {
   background: linear-gradient(to bottom right, #F5F5DC, #FFFACD);
 }
 
-h1 {
+.h1 {
   color: #C27B00;
   text-shadow: 1px 1px 2px #FFFACD;
   animation: fadeIn 2s ease-out;
