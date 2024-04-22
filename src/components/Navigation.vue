@@ -10,14 +10,6 @@
                         <div class="text-dark">Home</div>
                     </b-row>
                 </b-nav-item>
-                <b-nav-item>
-                    <b-row>
-                        <span class="material-symbols-outlined text-dark">bookmark</span>
-                    </b-row>
-                    <b-row>
-                        <div class="text-dark">Saved</div>
-                    </b-row>
-                </b-nav-item>
                 <b-nav-item href="/programs">
                     <b-row>
                         <span class="material-symbols-outlined text-dark">school</span>
@@ -32,6 +24,14 @@
                     </b-row>
                     <b-row>
                         <div class="text-dark">FAQ</div>
+                    </b-row>
+                </b-nav-item>
+                <b-nav-item href="/saved">
+                    <b-row>
+                        <span class="material-symbols-outlined text-dark">bookmark</span>
+                    </b-row>
+                    <b-row>
+                        <div class="text-dark">Saved</div>
                     </b-row>
                 </b-nav-item>
             </b-nav>

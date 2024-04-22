@@ -1,25 +1,53 @@
 <template>
   <div class="programs-container">
-  <b-container>
-  <b-row>
-    <b-col md="4" v-for="(item, index) in program_fixtures" :key="index">
-      <b-card class="program" :img-src="`${baseDir}images/${item.img}`">
-        <b-card-text>
-          <p class="name">{{ item.name }}</p>
-          <p class = "description"> {{ item.description }}</p>
-        </b-card-text>
-        <!-- <b-button href="/" variant="primary">Explore {{ item.name }}</b-button> -->
-        <b-button class="save" href="/">
-          <img src="/images/saved2.png" alt="Saved" />
-
-        </b-button>
-      </b-card>
-          </b-col>
-        </b-row>
-      </b-container>
-
+    <b-container>
+      <b-row>
+        <b-col md="4" v-for="(item, index) in program_fixtures" :key="index">
+          <b-card class="program" :img-src="`${baseDir}images/${item.img}`">
+            <b-card-text>
+              <p class="name">{{ item.name }}</p>
+              <p class="description">{{ item.description }}</p>
+            </b-card-text>
+            <b-button class="save" @click="toggleSave(item)">
+                <img :src="isSaved(item.name) ? '/images/saved2.png' : '/images/saved2.png'" alt="Save" />
+            </b-button>
+          </b-card>
+        </b-col>
+      </b-row>
+    </b-container>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      savedPrograms: [],
+    };
+  },
+  methods: {
+  toggleSave(item) {
+    const index = this.savedPrograms.findIndex(p => p.name === item.name);
+    if (index === -1) {
+      this.savedPrograms.push(item);
+    } else {
+      this.savedPrograms.splice(index, 1);
+    }
+    localStorage.setItem('savedPrograms', JSON.stringify(this.savedPrograms));
+  },
+  isSaved(programName) {
+    return this.savedPrograms.some(p => p.name === programName);
+  },
+  mounted() {
+    // Load saved programs from localStorage on component mount
+    const saved = localStorage.getItem('savedPrograms');
+    if (saved) {
+      this.savedPrograms = JSON.parse(saved);
+    }
+  }
+}
+}
+</script>
 
 
 <style scoped>
