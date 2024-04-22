@@ -38,7 +38,7 @@ html {
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  background: linear-gradient(to bottom right, #F5F5DC, #FFFACD);
+  background: #F5F5DC;
 }
 
 h1 {
@@ -86,4 +86,3 @@ h1 {
   }
 }
 </style>
-

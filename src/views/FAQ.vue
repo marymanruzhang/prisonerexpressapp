@@ -19,11 +19,17 @@ const faqItems = ref(faqData);
 
 
 <style scoped>
+
+html {
+  background-color: #F5F5DC;
+}
+
 .BAccordionItem {
   width: 90vw; /* Adjust the width of the accordion items */
   margin: 0 auto; /* Center the accordion items horizontally */
   margin-bottom: 20px; /* Add margin between each accordion item */
 }
+
 
 h1 {
   text-align: center;

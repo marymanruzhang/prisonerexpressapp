@@ -2,17 +2,17 @@
     {
       "title": "What does Prisoner Express do?",
       "answer": "Prisoner Express provides educational programs, resources, and support to incarcerated individuals.",
-      "visible": true
+      "visible": false
     },
     {
       "title": "How does Prisoner Express programs operate?",
       "answer": "Currently, we offer up to 9 programs in every 6-month cycle, and each program has between 500 to 900 participants. It makes for a continually growing photocopying and postage bill.",
-      "visible": true
+      "visible": false
     },
     {
       "title": "How to access current programs?",
       "answer": "To access current programs, please visit our website and navigate to the Programs section.",
-      "visible": true
+      "visible": false
     },
     {
       "title": "How to participate in a program you are interested in?",
