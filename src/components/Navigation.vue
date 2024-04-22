@@ -45,8 +45,6 @@
 .nav-container {
   position:fixed;
   bottom: 0;
-  padding-top: 100%;
-
 }
 
 </style>
