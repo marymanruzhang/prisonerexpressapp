@@ -8,9 +8,7 @@
               <p class="name">{{ item.name }}</p>
               <p class="description">{{ item.description }}</p>
             </b-card-text>
-            <b-button class="save" @click="toggleSave(item)">
-                <img :src="isSaved(item.name) ? '/images/saved2.png' : '/images/saved2.png'" alt="Save" />
-            </b-button>
+                <img class="save" @click="toggleSave(item)" :src="isSaved(item.name) ? '/images/saved2.png' : '/images/saved2.png'" alt="Save" />
           </b-card>
         </b-col>
       </b-row>
