@@ -1,67 +1,69 @@
 <template>
   <div class="programs-container">
-    <h1> Programs </h1>
-
-    <div class="tiles">
-      <b-card class = "city"  v-for="(item) in fixtures"  :key="item.name" :img-src="`${baseDir}images/${item.img}`">
+  <b-container>
+  <b-row>
+    <b-col md="4" v-for="(item, index) in program_fixtures" :key="index">
+      <b-card class="program" :img-src="`${baseDir}images/${item.img}`">
         <b-card-text>
-          <p class = "name"> {{ item.name }} </p>
-          {{ item.description }}
+          <p class="name">{{ item.name }}</p>
+          <p class = "description"> {{ item.description }}</p>
         </b-card-text>
-        <b-button href="/" variant="primary"> Explore more {{ item.name }}</b-button>
-        <b-button class = "save" href="/" > <img src="/images/saved2.png" alt="Saved" /> Save  </b-button>
+        <!-- <b-button href="/" variant="primary">Explore {{ item.name }}</b-button> -->
+        <b-button class="save" href="/">
+          <img src="/images/saved2.png" alt="Saved" />
 
+        </b-button>
       </b-card>
-    </div>
+          </b-col>
+        </b-row>
+      </b-container>
+
   </div>
 </template>
 
 
 <style scoped>
+
 .programs-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  background: #F5F5DC;
+  justify-content: center;
+  background-color: #F5F5DC;
+;
 }
 
-.tiles {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-.tile {
-  background-color: #FFFFFF;
-  color: #5C4033;
-  border: 1px solid #FFA500;
-  border-radius: 10px;
-  padding: 20px;
-  margin: 10px;
-  cursor: pointer;
-  width: 200px;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.tile:hover {
-  transform: scale(1.05);
-  background-color: #FFA500;
-  color: #FFFFFF;
-}
 
 .save {
   background-color: #FFFFFF;
   color: black;
   border: none;
+  position: absolute;
+  bottom: 10px;
+  right: 38px;
+  width: 30px; /* Adjust the width of the save icon */
 }
 
-.save:hover {
-  transform: scale(1.05);
-  background-color: #FFA500;
-  color: #FFFFFF;
+.program {
+  max-width: 350px;
+  height: 550px;
+  padding: 50px;
+  text-align: center;
+  margin-bottom: 8%;
 }
+
+.program:hover {
+  box-shadow: 0 0 10px black;
+}
+
+.name {
+  font-size: 35px;
+}
+
+.description {
+  font-size: 15px;
+}
+
 
 </style>

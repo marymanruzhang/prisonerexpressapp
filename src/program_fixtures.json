@@ -1,0 +1,33 @@
+{
+    "poetry": {
+        "name": "Poetry",
+        "img": "manuscript.png",
+        "description": "Participants given the opportunity to freely express themselves through writing, in any format that they desire."
+    },
+    "journal": {
+        "name": "Journal",
+        "img": "journal.png",
+        "description": "Enables every person to share their story and anecdotes from daily life with a broader audience. "
+    },
+    "essays": {
+        "name": "Essays",
+        "img": "contract.png",
+        "description": "Writers are given a Word Theme and a Picture Theme and encouraged to submit writing for each theme. They also receive a newsletter with all the writing for that month."
+    },
+    "art": {
+        "name": "Art",
+        "img": "art.png",
+        "description": "Offers the opportunity to explore the arts, led by Treacy Ziegler. Work may be showcased in public art exhibitions!"
+    },
+    "education": {
+        "name": "Education",
+        "img": "puzzle.png",
+        "description": "Programs that offer instruction in a variety of subjects, including App Design, Chess, and Songwriting!"
+    },
+
+    "newsletter": {
+        "name": "Newsletter",
+        "img": "newspaper.png",
+        "description": "Contains selected work submitted by participants from the previous programming cycle and explains how new members can contribute to Prisoner Express."
+    }
+}
