@@ -3,7 +3,7 @@ import ExploreView from '@/views/ExploreView.vue';
 import WorksView from '@/views/WorksView.vue';
 import Programs from '@/views/Programs.vue';
 import Saved from '@/views/Saved.vue';
-import FAQ from '../views/FAQ.vue'
+import FAQ from '@/views/FAQ.vue'
 
 const routes = [
   {
@@ -22,7 +22,7 @@ const routes = [
     component: Saved
   },
   {
-    path: '/',
+    path: '/FAQ',
     name: 'FAQ',
     component: FAQ
   },

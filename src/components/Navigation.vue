@@ -18,7 +18,7 @@
                         <div class="text-dark">Programs</div>
                     </b-row>
                 </b-nav-item>
-                <b-nav-item>
+                <b-nav-item href='/FAQ'>
                     <b-row>
                         <span class="material-symbols-outlined text-dark">help</span>
                     </b-row>
