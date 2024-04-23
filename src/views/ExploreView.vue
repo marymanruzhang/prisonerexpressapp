@@ -20,25 +20,27 @@
       <div class="tiles">
         <b-button v-for="(item, work_type) in fixtures.explore" :key="item.name" class="tile" @click="goToDetail(item.name)"
         :to="`/works/${work_type}`">
-          <h3>{{ item.name }}</h3>
-          <p>{{ item.description }}</p>
+          <div class="tile-header">
+            <img :src="`/public/images/${work_type}/${item.image}`" alt="Tile Image" class="tile-image">
+            <img src="/public/images/menu-dots.png" alt="Options" class="menu-dots" @click.stop="openTileOptions(item)">
+          </div>
+          <div class="tile-content">
+            <h3>{{ item.name }}</h3>
+            <p>{{ item.description }}</p>
+          </div>
         </b-button>
       </div>
     </b-row>
-    <!-- Sidebar -->
     <div v-if="isSidebarOpen" class="sidebar">
-      <!-- Sidebar content here -->
       <p>Sidebar Content</p>
       <b-button @click="toggleSidebar">Close Sidebar</b-button>
     </div>
-    <!-- Settings Modal -->
     <div v-if="isSettingsOpen" class="settings-modal">
       <p>Settings Content</p>
       <b-button @click="closeSettings">Close Settings</b-button>
     </div>
   </b-container>
 </template>
-
 
 <script setup>
 import { useRoute, useRouter } from 'vue-router';
@@ -67,7 +69,12 @@ function closeSettings() {
   isSettingsOpen.value = false;
   console.log("Settings closed");
 }
+
+function openTileOptions(item) {
+  console.log("Tile options for:", item.name);
+}
 </script>
+
 
 <style>
 body {
@@ -172,5 +179,25 @@ body {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
+.tile-image {
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
 
+.tile-header {
+  position: relative;
+}
+
+.menu-dots {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 20px;
+  cursor: pointer;
+}
+
+.tile-content {
+  padding-top: 10px;
+}
 </style>
