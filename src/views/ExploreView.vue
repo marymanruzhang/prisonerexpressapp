@@ -61,7 +61,6 @@
       {{ pdfNames[index] }}
   </b-button>
 
-
   <b-modal v-model="showPdfViewer" title="PDF Viewer" @hidden="closePdfViewer"> <VuePdfEmbed :source="selectedPdf" /> </b-modal>
   </div>
 
@@ -74,7 +73,6 @@ const router = useRouter();
 const isSidebarOpen = ref(false);
 const isSettingsOpen = ref(false);
 
-import { ref } from 'vue';
 import VuePdfEmbed from 'vue-pdf-embed';
 import 'vue-pdf-embed/dist/style/index.css';
 
