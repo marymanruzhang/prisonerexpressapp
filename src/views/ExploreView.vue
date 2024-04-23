@@ -12,13 +12,14 @@
       </b-col>
     </b-row>
     <b-row class="d-flex justify-content-center">
+
       <b-card
       tag="router-link"
       to="/highlight"
       v-for="(item) in fixtures.highlight"
       img-src="/public/images/highlight.png"
       img-alt="Card image"
-      class=" highlight mt-5"
+      class=" highlight mt-5 w-75"
       img-top
       overlay
 
