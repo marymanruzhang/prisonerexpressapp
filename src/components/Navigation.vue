@@ -1,61 +1,50 @@
-
 <template>
-
-<b-container >
-        <b-row>
-            <b-nav pills justified align="center" class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-                <b-nav-item href = "/" border-right>
+    <div class="container-fluid nav-container">
+        <b-row class="mx-0 px-0">
+            <b-nav pills justified fill class="w-100 navbar navbar-expand-lg navbar-light bg-light sticky-top">
+                <b-nav-item href="/">
                     <b-row>
-                        <span class="material-symbols-outlined">home</span>
+                        <span class="material-symbols-outlined text-dark">home</span>
                     </b-row>
                     <b-row>
-                        <div>Home</div>
-                    </b-row>
-                </b-nav-item>
-                <b-nav-item>
-                    <b-row>
-                        <span class="material-symbols-outlined">bookmark</span>
-                    </b-row>
-                    <b-row>
-                        <div>Saved</div>
+                        <div class="text-dark">Home</div>
                     </b-row>
                 </b-nav-item>
-                <b-nav-item>
+                <b-nav-item href="/programs">
                     <b-row>
-                        <span class="material-symbols-outlined">school</span>
+                        <span class="material-symbols-outlined text-dark">school</span>
                     </b-row>
                     <b-row>
-                        <div>Programs</div>
+                        <div class="text-dark">Programs</div>
                     </b-row>
                 </b-nav-item>
-                <b-nav-item>
+                <b-nav-item href='/FAQ'>
                     <b-row>
-                        <span class="material-symbols-outlined">help</span>
+                        <span class="material-symbols-outlined text-dark">help</span>
                     </b-row>
                     <b-row>
-                        <div>FAQ</div>
+                        <div class="text-dark">FAQ</div>
+                    </b-row>
+                </b-nav-item>
+                <b-nav-item href="/saved">
+                    <b-row>
+                        <span class="material-symbols-outlined text-dark">bookmark</span>
+                    </b-row>
+                    <b-row>
+                        <div class="text-dark">Saved</div>
                     </b-row>
                 </b-nav-item>
             </b-nav>
-
-
         </b-row>
-</b-container>
+    </div>
 </template>
 
-<style >
+<style>
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap');
 
-
-template {
-    border-right: 1px solid black; /* Adds a black line to the right of each nav item */
-    color: black;
+.nav-container {
+  position:fixed;
+  bottom: 0;
 }
-
-b-nav-item:last-child {
-    border-right: none; /* Removes the border from the last nav item */
-}
-
-
 
 </style>

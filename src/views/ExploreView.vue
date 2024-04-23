@@ -1,31 +1,30 @@
 <template>
   <div class="explore-container">
-    <h1>Explore Prison Express</h1>
+    <p class = "h1">Explore Prison Express</p>
     <div class="tiles">
-      <b-button v-for="(item) in fixtures.explore2" :key="item.name" class="tile" @click="goToDetail(item.name)">
-        <h3>{{item.name}}</h3>
-        <p>{{item.description }}</p>
-      </b-button>
+      <!-- <b-button v-for="(item) in fixtures.explore2" :key="item.name" class="tile" @click="goToDetail(item.name)">
+        <h3>{{ item.name }}</h3>
+        <p>{{ item.description }}</p>
+      </b-button> -->
 
       <b-button v-for="(item, work_type) in fixtures.explore" :key="item.name" class="tile" @click="goToDetail(item.name)"
       :to = "`/works/${work_type}`">
-        <h3>{{ item.name}}</h3>
+        <h3>{{ item.name }}</h3>
         <p>{{ item.description }}</p>
       </b-button>
-      
     </div>
   </div>
 </template>
 
-<script setup>
-// import { computed } from 'vue';
-// import ExploreFixtures from '@/ExploreFixtures.json';
 
-// const exploreItems = computed(() => ExploreFixtures);
+<script setup>
+import { useRoute, useRouter } from 'vue-router';
+
+const router = useRouter();
 
 function goToDetail(name) {
-  // You can expand this function to navigate to a detail view or perform other actions
-  console.log("Clicked on:", name);
+  router.push({ name: 'detail', params: { itemName: name } });
+  console.log("Navigated to:", name);
 }
 </script>
 
@@ -42,45 +41,48 @@ html {
   background: #F5F5DC;
 }
 
-h1 {
+.h1 {
   color: #C27B00;
   text-shadow: 1px 1px 2px #FFFACD;
+  animation: fadeIn 2s ease-out;
 }
 
 .tiles {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
 }
 
 .tile {
   background-color: #FFFFFF;
   color: #5C4033;
-  border: 1px solid #FFA500;
-  border-radius: 10px;
+  border: 2px solid #FFA500;
+  border-radius: 15px;
   padding: 20px;
   margin: 10px;
   cursor: pointer;
-  width: 200px;
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .tile:hover {
-  transform: scale(1.05);
+  transform: translateY(-5px);
   background-color: #FFA500;
   color: #FFFFFF;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @media (min-width: 1200px) {
   .tiles {
-    justify-content: start;
-  }
-
-  .tile {
-    width: calc(25% - 20px);
+    grid-template-columns: repeat(4, 1fr);
   }
 }
-
 </style>
