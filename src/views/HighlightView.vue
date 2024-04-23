@@ -1,4 +1,6 @@
 
+<script>
+</script>
 
 <template>
     <b-container fluid >
