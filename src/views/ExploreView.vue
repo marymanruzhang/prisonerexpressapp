@@ -1,19 +1,24 @@
 <template>
-  <div class="explore-container">
-    <p class = "h1">Explore Prison Express</p>
-    <div class="tiles">
-      <!-- <b-button v-for="(item) in fixtures.explore2" :key="item.name" class="tile" @click="goToDetail(item.name)">
-        <h3>{{ item.name }}</h3>
-        <p>{{ item.description }}</p>
-      </b-button> -->
+  <b-container class="explore-container">
+    <b-row>
+      <p class = "h1">Explore Prison Express</p>
+    </b-row>
+    <b-row>
+      <b-card class="tile">
+        Highlights card
+      </b-card>
 
+    </b-row>
+    <b-row>
+     <div class="tiles">
       <b-button v-for="(item, work_type) in fixtures.explore" :key="item.name" class="tile" @click="goToDetail(item.name)"
       :to = "`/works/${work_type}`">
         <h3>{{ item.name }}</h3>
         <p>{{ item.description }}</p>
       </b-button>
     </div>
-  </div>
+  </b-row>
+  </b-container>
 </template>
 
 
