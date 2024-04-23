@@ -1,8 +1,10 @@
 <template>
   <main>
     <div class = "faq">
-    <h1>FAQ</h1>
-    <p>Below are frequently asked questions</p>
+      <div class = "head">
+        <h1>FAQ</h1>
+        <p>Below are frequently asked questions</p>
+      </div>
     <BAccordion>
       <div v-for="(faq, index) in faqData" :key="index" class="accordion-item-wrapper">
         <BAccordionItem :title="faq.title" :visible="faq.visible">
@@ -31,22 +33,27 @@ main {
   width: 80vw;
   margin: 0 auto;
   background-color: #F5F5DC;
+  padding-bottom: 15vh;
+}
+
+.head {
+  padding-bottom: 2vh;
 }
 
 .BAccordionItem {
   width: 90vw; /* Adjust the width of the accordion items */
   margin: 0 auto; /* Center the accordion items horizontally */
-  margin-bottom: 20px; /* Add margin between each accordion item */
-  border-radius: 10px; /* Round the corners */
+  margin-bottom: 10px; /* Add margin between each accordion item */
+  border-radius: 15px; /* Round the corners */
 }
 
 .accordion-item-wrapper {
-  margin-bottom: 20px; /* Add margin between each BAccordionItem */
+  margin-bottom: 3vh; /* Add margin between each BAccordionItem */
 }
 
 h1 {
   text-align: center;
-  padding-top: 3%;
+  padding-top: 6vh;
 }
 
 p {
