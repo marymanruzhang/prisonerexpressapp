@@ -55,15 +55,59 @@
       <b-button @click="closeSettings">Close Settings</b-button>
     </div>
   </b-container>
+
+  <div class = newsletters>
+  <b-button v-for="(pdf, index) in pdfSources" :key="index" @click="selectPdf(index)">
+      {{ pdfNames[index] }}
+  </b-button>
+
+
+  <b-modal v-model="showPdfViewer" title="PDF Viewer" @hidden="closePdfViewer"> <VuePdfEmbed :source="selectedPdf" /> </b-modal>
+  </div>
+
 </template>
 
 <script setup>
 import { useRoute, useRouter } from 'vue-router';
 import { ref } from 'vue';
-
 const router = useRouter();
 const isSidebarOpen = ref(false);
 const isSettingsOpen = ref(false);
+
+import { ref } from 'vue';
+import VuePdfEmbed from 'vue-pdf-embed';
+import 'vue-pdf-embed/dist/style/index.css';
+
+const slide = ref(0);
+
+const pdfSources = [
+  "/pdfs/winter24.pdf",
+  "/pdfs/summer23.pdf",
+  "/pdfs/winter23.pdf",
+  "/pdfs/summer22.pdf",
+  "/pdfs/winter22.pdf"
+];
+
+const pdfNames = [
+  "Winter 2024",
+  "Summer 2023",
+  "Winter 2023",
+  "Summer 2022",
+  "Winter 2022",
+];
+
+const selectedPdf = ref(null);
+const showPdfViewer = ref(false);
+
+const selectPdf = (index) => {
+  selectedPdf.value = pdfSources[index];
+  showPdfViewer.value = true;
+};
+
+const closePdfViewer = () => {
+  selectedPdf.value = null;
+  showPdfViewer.value = false;
+};
 
 function goToDetail(name) {
   router.push({ name: 'detail', params: { itemName: name } });
