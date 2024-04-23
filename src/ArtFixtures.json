@@ -1,20 +1,20 @@
 {
     "art1": {
-        "title": "Untitled",
+        "title": "1",
         "img": "art1.png",
         "author": "William Hill",
         "date": null,
         "newsletter": "Spring 2017 Prisoner Express Art Show"
     },
     "art2": {
-        "title": "Untitled",
+        "title": "2",
         "img": "art2.png",
         "author": "William Hill",
         "date": null,
         "newsletter": "Spring 2017 Prisoner Express Art Show"
     },
     "art3": {
-        "title": "Untitled",
+        "title": "3",
         "img": "art3.png",
         "author": "Timothy Owens",
         "date": null,
