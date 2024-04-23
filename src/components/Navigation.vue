@@ -43,8 +43,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap');
 
 .nav-container {
-  position: fixed;
-  bottom: 0;
+  /* position: fixed;
+  bottom: 0; */
   background-color: #EEEEEE;
 }
 
