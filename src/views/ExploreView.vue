@@ -11,11 +11,25 @@
         <img src="/public/images/settings.png" alt="Settings" @click="openSettings">
       </b-col>
     </b-row>
-    <b-row>
-      <b-card class="tile">
-        Highlights card
-      </b-card>
+    <b-row class="d-flex justify-content-center">
+      <b-card
+      tag="router-link"
+      to="/highlight"
+      v-for="(item) in fixtures.highlight"
+      img-src="/public/images/highlight.png"
+      img-alt="Card image"
+      class=" highlight mt-5"
+      img-top
+      overlay
+
+    >
+        <span class="text-white font-weight-bold h_text d-flex"
+        style="align-items: center; justify-content: center; height: 100%;">Highlighted Work</span>
+
+    </b-card>
+
     </b-row>
+    <b-row  class="d-flex justify-content-center h1 mt-3"> Explore </b-row>
     <b-row>
       <div class="tiles">
         <b-button v-for="(item, work_type) in fixtures.explore" :key="item.name" class="tile" @click="goToDetail(item.name)"
@@ -79,11 +93,34 @@ body {
   background-color: #F0F8FF;
 }
 
+.h1 {
+  color: #000000;
+  text-shadow: 1px 1px 2px #FFFACD;
+  animation: fadeIn 3s ease-out;
+}
+
 .header {
   background-color: #FFFFFF;
   padding: 10px 0;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   animation: fadeIn 0.5s ease-out;
+}
+
+.h_text{
+  font-size: 70px;
+  text-shadow:
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000,
+    -1px -2px 0 #000,
+    1px -2px 0 #000,
+    -1px 2px 0 #000,
+    1px 2px 0 #000,
+    -2px -1px 0 #000,
+    2px -1px 0 #000,
+    -2px 1px 0 #000,
+    2px 1px 0 #000
 }
 
 .logo {
@@ -128,7 +165,24 @@ body {
   transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.tile:hover {
+.highlight{
+  background-color: #FFFFFF;
+  color: #333333;
+  border: 2px solid #FFA500;
+  border-radius: 15px;
+  padding: 5px;
+  cursor: pointer;
+  text-align: center;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+b-card.highlight{
+  height:30%;
+}
+
+
+.tile:hover, .highlight:hover {
   transform: translateY(-5px);
   background-color: #007BFF;
   color: #FFFFFF;
