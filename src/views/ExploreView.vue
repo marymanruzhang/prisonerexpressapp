@@ -22,7 +22,7 @@
         :to="`/works/${work_type}`">
           <div class="tile-header">
             <img :src="`/public/images/${work_type}/${item.image}`" alt="Tile Image" class="tile-image">
-            <img src="/public/images/menu-dots.png" alt="Options" class="menu-dots" @click.stop="openTileOptions(item)">
+            <img src="/public/images/menu-dots.png" alt="Options" class="menu-dots">
           </div>
           <div class="tile-content">
             <h3>{{ item.name }}</h3>
@@ -70,9 +70,6 @@ function closeSettings() {
   console.log("Settings closed");
 }
 
-function openTileOptions(item) {
-  console.log("Tile options for:", item.name);
-}
 </script>
 
 
