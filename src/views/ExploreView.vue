@@ -1,9 +1,6 @@
 <template>
   <b-container >
     <b-row>
-      <p class = "h1">Explore Prison Express</p>
-    </b-row>
-    <b-row>
       <b-card class="tile">
         Highlights card
       </b-card>
