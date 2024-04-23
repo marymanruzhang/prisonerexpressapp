@@ -47,7 +47,6 @@
   bottom: 0;
 }
 
-/* Remove width restriction */
 b-row {
     width: 100vw;
 }
