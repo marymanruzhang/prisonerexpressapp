@@ -85,10 +85,11 @@ body {
 .logo {
   width: 200px;
   transition: transform 0.3s ease;
+  transform: translateY(-30px);
 }
 
 .logo:hover {
-  transform: scale(1.05);
+  transform: scale(1.05) translateY(-30px);
 }
 
 .sidebar-toggle img, .settings-toggle img {
