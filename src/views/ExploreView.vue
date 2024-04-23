@@ -1,5 +1,5 @@
 <template>
-  <b-container class="explore-container">
+  <b-container >
     <b-row>
       <p class = "h1">Explore Prison Express</p>
     </b-row>
@@ -34,10 +34,6 @@ function goToDetail(name) {
 </script>
 
 <style>
-html {
-  background-color: #F5F5DC;
-}
-
 .explore-container {
   display: flex;
   flex-direction: column;
