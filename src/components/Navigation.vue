@@ -1,6 +1,6 @@
 <template>
     <div class="container-fluid nav-container">
-        <b-row class="mx-0 px-0">
+        <b-row class="nav">
             <b-nav pills justified fill class="w-100 navbar navbar-expand-lg navbar-light bg-light sticky-top">
                 <b-nav-item href="/">
                     <b-row>
@@ -39,12 +39,17 @@
     </div>
 </template>
 
-<style>
+<style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap');
 
 .nav-container {
-  position:fixed;
+  position: fixed;
   bottom: 0;
+}
+
+/* Remove width restriction */
+b-row {
+    width: 100vw;
 }
 
 </style>

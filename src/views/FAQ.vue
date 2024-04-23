@@ -6,7 +6,7 @@
     <BAccordion>
       <div v-for="(faq, index) in faqData" :key="index" class="accordion-item-wrapper">
         <BAccordionItem :title="faq.title" :visible="faq.visible">
-          <strong>{{ faq.title }}</strong> {{ faq.answer }}
+           {{ faq.answer }}
         </BAccordionItem>
       </div>
     </BAccordion>
