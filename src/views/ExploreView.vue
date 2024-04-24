@@ -45,10 +45,23 @@
       </b-row>
     </b-container>
 
-    <div class = newsletters>
-    <b-button v-for="(pdf, index) in pdfSources" :key="index" @click="selectPdf(index)">
+      <p class = "read"> Read our past newsletters! </p>
+
+      <div class = newsletters>
+      <b-carousel :interval="5000" controls indicators img-width="1024"
+        img-height="480"
+        style="text-shadow: 1px 1px 2px #333;"
+        @sliding-start="onSlideStart"
+        @sliding-end="onSlideEnd">
+      <b-carousel-slide v-for="(pdf, index) in pdfSources" :key="index" @click="selectPdf(index)"
+      :img-src="imageRoutes[index]" >
+        <p class = "caption"> {{ pdfNames[index]}} </p>
+      </b-carousel-slide>
+      </b-carousel>
+
+    <!-- <b-button v-for="(pdf, index) in pdfSources" :key="index" @click="selectPdf(index)">
         {{ pdfNames[index] }}
-    </b-button>
+    </b-button> -->
 
     <b-modal v-model="showPdfViewer" title="PDF Viewer" @hidden="closePdfViewer"> <VuePdfEmbed :source="selectedPdf" /> </b-modal>
     </div>
@@ -80,6 +93,14 @@ const pdfNames = [
   "Summer 2022",
   "Winter 2022",
 ];
+
+const imageRoutes = [
+    "images/news/winter24.jpg",
+    "images/news/summer23.jpg",
+    "images/news/winter23.jpg",
+    "images/news/summer22.jpg",
+    "images/news/winter22.jpg"
+  ]
 
 const selectedPdf = ref(null);
 const showPdfViewer = ref(false);
@@ -132,6 +153,23 @@ body {
   transform: translateY(-3px);
   color: #FFFFFF;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.newsletters {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2%;
+}
+
+.read {
+  margin-left: 33%;
+  font-weight: bold;
+  font-size: 35px;
+  margin-top: 5%;
+}
+
+.caption{
+  font-size: 35px;
 }
 
 @media (max-width: 600px) {
