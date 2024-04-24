@@ -30,6 +30,7 @@ pnpm build
 
 ### Citations
 
+```sh
 Program Image Links
 https://www.flaticon.com/
 Newsletter photos
@@ -42,3 +43,4 @@ Newsletter PDFS
 https://prisonerexpress.org/programs/education-programs/paged-2/2/
 PDF Library
 https://www.npmjs.com/package/vue-pdf-embed
+```

@@ -243,10 +243,27 @@ body {
   }
 }
 
-@media (max-width: 480px) {
-  .tile-header img {
-    aspect-ratio: 4 / 3;
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+
+@media (max-width: 600px) {
+  .tiles {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
+.tile {
+  width: 100%;
+  max-width: 80%;
+  margin: 20px auto;
+}
 </style>
