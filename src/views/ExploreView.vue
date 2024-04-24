@@ -161,7 +161,7 @@ body {
 }
 
 .read {
-  margin-left: 33%;
+  text-align: center;
   font-weight: bold;
   font-size: 35px;
   margin-top: 5%;
