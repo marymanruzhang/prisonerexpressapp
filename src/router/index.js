@@ -4,7 +4,7 @@ import WorksView from '@/views/WorksView.vue';
 import Programs from '@/views/Programs.vue';
 import Saved from '@/views/Saved.vue';
 import FAQ from '@/views/FAQ.vue';
-import Highlight from '@/views/HighlightView.vue';
+
 
 const routes = [
   {
@@ -29,11 +29,6 @@ const routes = [
   },
   // Other routes can be added here
   { path: '/works/:work_type', name: 'works', component: WorksView, props: true },
-  {
-    path: '/highlight',
-    name: 'Highlight',
-    component: Highlight
-  },
 
 ];
 

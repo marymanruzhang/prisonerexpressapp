@@ -1,11 +1,11 @@
 <template>
+
+<!-- tag="router-link"
+        to="/highlight" -->
   <div class="global-content-padding">
     <b-container fluid>
       <b-row class="d-flex justify-content-center">
-
-        <b-card
-        tag="router-link"
-        to="/highlight"
+        <b-card v-b-modal.my-modal
         v-for="(item) in fixtures.highlight"
         img-src="/public/images/highlight-image/highlight.png"
         img-alt="Card image"
@@ -15,7 +15,21 @@
         >
   <span class="text-white font-weight-bold h_text d-flex"
         style="align-items: center; justify-content: center; height: 100%;">Highlighted Work</span>
+
+        <b-modal id="my-modal" hide-footer  class = "w-100">
+          <h3 align = "center" v-if="item['title']" class="card-title mb-3">{{ item["title"] }}</h3>
+                        <h6 align = "center" v-if="item['author']" class="card-text">by: {{ item["author"] }}</h6>
+                        <h6 align = "center" v-if="item['date']">Published: {{ item["date"] }}</h6>
+                        <h6 align = "center" v-if="item['newsletter']">Featured in {{ item["newsletter"] }}</h6>
+                    <b-img
+                    class = "w-100"
+                        :src="`${baseDir}images/${item['img']}`">
+
+                    </b-img>
+                </b-modal>
       </b-card>
+
+
 
       </b-row>
       <b-row  class="d-flex justify-content-center h1 mt-3"> Explore </b-row>
