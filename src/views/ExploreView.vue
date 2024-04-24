@@ -34,7 +34,6 @@
           <b-button v-for="(item, work_type) in fixtures.explore" :key="item.name" class="tile" @click="goToDetail(item.name)" :to="`/works/${work_type}`">
             <div class="tile-header">
               <b-card :img-src="`${baseDir}images/${item.img}`"> </b-card>
-              <img src="/public/images/menu-dots.png" alt="Options" class="menu-dots">
             </div>
             <div class="tile-content">
               <h3>{{ item.name }}</h3>
@@ -147,7 +146,7 @@ body {
 
 @media (max-width: 480px) {
   .tiles {
-    grid-template-columns: 1fr; /* Only one tile per row */
+    grid-template-columns: 1fr;
     padding: 0 10px;
   }
 
@@ -233,6 +232,65 @@ body {
   background-color: grey;
   color: #FFFFFF;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.tile-header img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 4 / 4;
+}
+
+.tile {
+  background-color: #FFFFFF;
+  color: #333333;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.5s ease;
+}
+
+.tile::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(255,255,255,0), rgba(0,0,0,0.1));
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.tile:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.tile:hover::before {
+  opacity: 1;
+}
+
+.tile-content {
+  padding-top: 10px;
+}
+
+.tile-header, .tile-content {
+  pointer-events: none;
+}
+
+@media (max-width: 600px) {
+  .tiles {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .tile-header img {
+    aspect-ratio: 4 / 3;
+  }
 }
 
 </style>
