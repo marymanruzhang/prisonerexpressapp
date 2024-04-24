@@ -38,14 +38,6 @@ export default {
   <b-row>
    <p align = "center" class = "uppercase"> {{this.work_type}} Collection</p>
   </b-row>
-
-
-    <!-- <b-modal id="my-modal" hide-footer class="pdf-container">
-      <p> {{selectedFixture['title']  }}</p>
-
-    </b-modal> -->
-
-
   <b-row>
     <b-card v-b-modal.my-modal
       class="work_card stylish-card"

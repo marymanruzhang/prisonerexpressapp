@@ -6,6 +6,7 @@
     <b-container fluid >
         <b-row>
             <h1 align = "center"> Highlighted Work</h1>
+
         </b-row>
         <b-row class = "justify-content-center">
             <b-card v-b-modal.my-modal
