@@ -394,7 +394,8 @@ color: #555;
 }
 
 .close-button {
-  background-color: #FF6347; /* Tomato color for the close button for a distinctive look */
+  margin-top: 70vh;
+  background-color: #FF6347;
 }
 
 .close-button:hover {
