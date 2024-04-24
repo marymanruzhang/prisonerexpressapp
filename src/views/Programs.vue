@@ -2,8 +2,8 @@
   <div class="global-content-padding">
     <div class="programs-container">
       <b-container>
-        <b-row>
-          <b-col md="4" v-for="(item, index) in program_fixtures" :key="index">
+        <b-row class="justify-content-center">
+          <b-col cols="12" sm="6" md="4" v-for="(item, index) in program_fixtures" :key="index" class="d-flex justify-content-center">
             <b-card class="program" :img-src="`${baseDir}images/${item.img}`">
               <b-card-text>
                 <p class="name">{{ item.name }}</p>
@@ -23,7 +23,6 @@
     </div>
   </div>
 </template>
-
 
 <script>
 export default {
@@ -63,7 +62,6 @@ export default {
 }
 </script>
 
-
 <style scoped>
 
 .programs-container {
@@ -78,10 +76,7 @@ export default {
 .save {
   color: red;
   cursor: pointer;
-  position: absolute;
-  bottom: 10px;
-  right: 38px;
-  width: 30px;
+  width: 20px; /* Adjust the width as needed */
   transition: filter 0.3s;
 }
 
@@ -92,7 +87,6 @@ export default {
 .program {
   position: relative;
   max-width: 350px;
-  height: 550px;
   padding: 50px;
   text-align: center;
   margin-bottom: 8%;
@@ -111,9 +105,6 @@ export default {
 }
 
 .save-message {
-  position: absolute;
-  bottom: 25px;
-  right: 50px;
   color: green;
   font-size: 18px;
 }
@@ -127,6 +118,23 @@ export default {
 }
 
 .global-content-padding {
-    padding-bottom: 100px;
+  padding-bottom: 100px;
 }
+
+.b-col {
+
+}
+
+@media (max-width: 768px) {
+  .program {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 576px) {
+  .program {
+    max-width: 250px;
+  }
+}
+
 </style>
