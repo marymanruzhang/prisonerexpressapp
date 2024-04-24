@@ -26,13 +26,13 @@ const faqItems = ref(faqData);
 <style scoped>
 
 main {
-  background-color: #F5F5DC;
+  background-color: #F0F8FF;
 }
 
 .faq {
   width: 80vw;
   margin: 0 auto;
-  background-color: #F5F5DC;
+  background-color: #F0F8FF;
   padding-bottom: 15vh;
 }
 
@@ -41,14 +41,14 @@ main {
 }
 
 .BAccordionItem {
-  width: 90vw; /* Adjust the width of the accordion items */
-  margin: 0 auto; /* Center the accordion items horizontally */
-  margin-bottom: 10px; /* Add margin between each accordion item */
-  border-radius: 15px; /* Round the corners */
+  width: 90vw;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  border-radius: 15px;
 }
 
 .accordion-item-wrapper {
-  margin-bottom: 3vh; /* Add margin between each BAccordionItem */
+  margin-bottom: 3vh;
 }
 
 h1 {

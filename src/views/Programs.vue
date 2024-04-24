@@ -1,24 +1,26 @@
 <template>
-  <div class="programs-container">
-    <b-container>
-      <b-row>
-        <b-col md="4" v-for="(item, index) in program_fixtures" :key="index">
-          <b-card class="program" :img-src="`${baseDir}images/${item.img}`">
-            <b-card-text>
-              <p class="name">{{ item.name }}</p>
-              <p class="description">{{ item.description }}</p>
-            </b-card-text>
-            <img class="save" @click="toggleSave(item)"
-                 :src="isSaved(item.name) ? '/images/saved2_active.png' : '/images/saved2.png'" alt="Save" />
-            <transition name="fade">
-              <p class="save-message" v-if="showSaveMessage && currentSaving === item.name">
-                Saved!
-              </p>
-            </transition>
-          </b-card>
-        </b-col>
-      </b-row>
-    </b-container>
+  <div class="global-content-padding">
+    <div class="programs-container">
+      <b-container>
+        <b-row>
+          <b-col md="4" v-for="(item, index) in program_fixtures" :key="index">
+            <b-card class="program" :img-src="`${baseDir}images/${item.img}`">
+              <b-card-text>
+                <p class="name">{{ item.name }}</p>
+                <p class="description">{{ item.description }}</p>
+              </b-card-text>
+              <img class="save" @click="toggleSave(item)"
+                  :src="isSaved(item.name) ? '/images/saved2_active.png' : '/images/saved2.png'" alt="Save" />
+              <transition name="fade">
+                <p class="save-message" v-if="showSaveMessage && currentSaving === item.name">
+                  Saved!
+                </p>
+              </transition>
+            </b-card>
+          </b-col>
+        </b-row>
+      </b-container>
+    </div>
   </div>
 </template>
 
@@ -70,7 +72,7 @@ export default {
   align-items: center;
   padding: 20px;
   justify-content: center;
-  background-color: #F5F5DC;
+  background-color: #F0F8FF;
 }
 
 .save {
@@ -124,4 +126,7 @@ export default {
   opacity: 0;
 }
 
+.global-content-padding {
+    padding-bottom: 100px;
+}
 </style>
