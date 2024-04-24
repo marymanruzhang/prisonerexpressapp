@@ -20,23 +20,22 @@
         v-for="(item) in fixtures.highlight"
         img-src="/public/images/highlight.png"
         img-alt="Card image"
-        class=" highlight mt-5 w-75"
+        class="highlight mt-5 w-75"
         img-top
         overlay
-      >
-          <span class="text-white font-weight-bold h_text d-flex"
-          style="align-items: center; justify-content: center; height: 100%;">Highlighted Work</span>
-
+        >
+  <span class="text-white font-weight-bold h_text d-flex"
+        style="align-items: center; justify-content: center; height: 100%;">Highlighted Work</span>
       </b-card>
 
       </b-row>
       <b-row  class="d-flex justify-content-center h1 mt-3"> Explore </b-row>
       <b-row>
+
         <div class="tiles">
-          <b-button v-for="(item, work_type) in fixtures.explore" :key="item.name" class="tile" @click="goToDetail(item.name)"
-          :to="`/works/${work_type}`">
+          <b-button v-for="(item, work_type) in fixtures.explore" :key="item.name" class="tile" @click="goToDetail(item.name)" :to="`/works/${work_type}`">
             <div class="tile-header">
-              <img :src="`/public/images/${work_type}/${item.image}`" alt="Tile Image" class="tile-image">
+              <b-card :img-src="`${baseDir}images/${item.img}`"> </b-card>
               <img src="/public/images/menu-dots.png" alt="Options" class="menu-dots">
             </div>
             <div class="tile-content">
@@ -51,8 +50,13 @@
         <b-button @click="toggleSidebar">Close Sidebar</b-button>
       </div>
       <div v-if="isSettingsOpen" class="settings-modal">
-        <p>Settings Content</p>
-        <b-button @click="closeSettings">Close Settings</b-button>
+        <div class="settings-modal">
+          <p>You can change the page to dark mode!!!</p>
+          <b-button @click="toggleAppDarkMode" class="mb-3">
+            {{ darkMode ? 'Disable Dark Mode' : 'Enable Dark Mode' }}
+          </b-button>
+          <b-button @click="closeSettings" class="mb-3">Close Settings</b-button>
+        </div>
       </div>
     </b-container>
 
@@ -72,6 +76,7 @@ import { ref } from 'vue';
 const router = useRouter();
 const isSidebarOpen = ref(false);
 const isSettingsOpen = ref(false);
+const darkMode = ref(false);
 
 import VuePdfEmbed from 'vue-pdf-embed';
 import 'vue-pdf-embed/dist/style/index.css';
@@ -127,11 +132,19 @@ function closeSettings() {
   console.log("Settings closed");
 }
 
+function toggleAppDarkMode() {
+  darkMode.value = !darkMode.value;
+  localStorage.setItem('darkMode', darkMode.value);
+  document.body.classList.toggle('dark-theme', darkMode.value);
+}
+
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Jacquard+12+Charted&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Noto Serif", serif;
   background-color: #F0F8FF;
 }
 
@@ -140,7 +153,6 @@ body {
   text-shadow: 1px 1px 2px #FFFACD;
   animation: fadeIn 3s ease-out;
 }
-
 
 .h_text{
   font-size: 70px;
@@ -200,19 +212,6 @@ body {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
 }
-
-.highlight{
-  background-color: #FFFFFF;
-  color: #333333;
-  border: 2px solid #FFA500;
-  border-radius: 15px;
-  padding: 5px;
-  cursor: pointer;
-  text-align: center;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
 b-card.highlight{
   height:30%;
 }
@@ -223,6 +222,7 @@ b-card.highlight{
   color: #FFFFFF;
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
+
 .sidebar {
   position: fixed;
   left: 0;
@@ -243,12 +243,17 @@ b-card.highlight{
   background: #FFFFFF;
   box-shadow: -4px 0 15px rgba(0,0,0,0.1);
   z-index: 1000;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 50px;
 }
 
 .settings-toggle {
   text-align: right;
   justify-content: flex-end;
   padding-right: 20px;
+  margin-bottom: 40px;
 }
 
 .settings-toggle img {
@@ -286,7 +291,6 @@ b-card.highlight{
 .tile-content {
   padding-top: 10px;
 }
-
 
 .header {
   background-color: #EEEEEE;
@@ -327,4 +331,60 @@ b-card.highlight{
 .global-content-padding {
     padding-bottom: 100px;
 }
+
+.highlight img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  padding: -10%;
+}
+
+.highlight {
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+  padding: 5px;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.h_text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  font-size: 2em;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.dark-theme {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.dark-theme .header, .dark-theme .settings-modal, .dark-theme .sidebar {
+  background-color: #333;
+  color: #ffffff;
+}
+
+.dark-theme .tile, .dark-theme .highlight {
+  background-color: #424242;
+  color: #ffffff;
+  border-color: #616161;
+}
+
+.dark-theme .tile:hover, .dark-theme .highlight:hover {
+  background-color: #535353;
+  color: #ffffff;
+  box-shadow: 0 12px 24px rgba(255, 255, 255, 0.12);
+}
+
+.dark-theme img {
+  filter: brightness(0.8);
+}
+
 </style>
