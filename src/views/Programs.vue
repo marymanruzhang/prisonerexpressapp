@@ -86,10 +86,10 @@ export default {
 
 .program {
   position: relative;
-  max-width: 350px;
-  padding: 50px;
+  max-width: 350px; /* Adjust max-width for responsiveness */
+  padding: 4vw; /* Adjust padding for responsiveness */
   text-align: center;
-  margin-bottom: 8%;
+  margin-bottom: 4vw; /* Adjust margin for responsiveness */
 }
 
 .program:hover {
@@ -97,16 +97,16 @@ export default {
 }
 
 .name {
-  font-size: 35px;
+  font-size: 1.8vw; /* Adjust font size for responsiveness */
 }
 
 .description {
-  font-size: 15px;
+  font-size: 1.2vw; /* Adjust font size for responsiveness */
 }
 
 .save-message {
   color: green;
-  font-size: 18px;
+  font-size: 1.4vw; /* Adjust font size for responsiveness */
 }
 
 .fade-enter-active, .fade-leave-active {
@@ -118,22 +118,54 @@ export default {
 }
 
 .global-content-padding {
-  padding-bottom: 100px;
-}
-
-.b-col {
-
+  padding-bottom: 10vw; /* Adjust padding for responsiveness */
 }
 
 @media (max-width: 768px) {
   .program {
-    max-width: 300px;
+    max-width: 300px; /* Adjust max-width for smaller screens */
+    padding: 5vw; /* Adjust padding for smaller screens */
+    margin-bottom: 5vw; /* Adjust margin for smaller screens */
+  }
+
+  .name {
+    font-size: 2vw; /* Adjust font size for smaller screens */
+  }
+
+  .description {
+    font-size: 1.4vw; /* Adjust font size for smaller screens */
+  }
+
+  .save-message {
+    font-size: 1.6vw; /* Adjust font size for smaller screens */
+  }
+
+  .global-content-padding {
+    padding-bottom: 15vw; /* Adjust padding for smaller screens */
   }
 }
 
 @media (max-width: 576px) {
   .program {
-    max-width: 250px;
+    max-width: 250px; /* Adjust max-width for even smaller screens */
+    padding: 6vw; /* Adjust padding for even smaller screens */
+    margin-bottom: 6vw; /* Adjust margin for even smaller screens */
+  }
+
+  .name {
+    font-size: 2.2vw; /* Adjust font size for even smaller screens */
+  }
+
+  .description {
+    font-size: 1.5vw; /* Adjust font size for even smaller screens */
+  }
+
+  .save-message {
+    font-size: 1.8vw; /* Adjust font size for even smaller screens */
+  }
+
+  .global-content-padding {
+    padding-bottom: 20vw; /* Adjust padding for even smaller screens */
   }
 }
 
