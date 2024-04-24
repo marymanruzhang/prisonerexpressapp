@@ -60,7 +60,7 @@ function isActive(path) {
 }
 
 .nav {
-  box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .nav-icon {
