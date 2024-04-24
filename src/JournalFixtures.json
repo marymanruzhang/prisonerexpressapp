@@ -1,11 +1,93 @@
 {
-    "sample": {
-        "title": "Sample Journal",
-        "img": "poetry28.png",
-        "author": "Lee Cotman",
-        "date": "February 29, 2024",
-        "newsletter": null,
-        "pdf": "https://prisonerexpress.org/wp-content/uploads/2024/02/PP28-final.pdf"
+    "J1": {
+        "title": "Faded But Not Gone",
+        "img": "/journal-images/j1.png",
+        "author": "Joshua Morales",
+        "date": "April 2024",
+        "mailing_address": "Joshua Morales, #02371300 TDCJ McConnell Unit PO BOX 660400 Dallas, TX, 75266-0400",
+        "pdf-url": "https://v5.airtableusercontent.com/v3/u/28/28/1713931200000/tZqJodcG1z44ScQI0GyRrA/pYkVkyFldIlMosdvvZ-tiQn1k-PRj7WkEmtXR9Tg7sWmfrpS3Tw8mtG3teXUWgsgNf8xPdCe6z88vXAQtHTyhTmjY50Ad-204-YPH9-nm4vnvs49Sz7j2wjlls4YVybOk6qcrN_TeNU4z6d7PfSZiK3oMXUEfX3dvmtv-XPyNFc/Ns1hl7fRg8-bqViliEbLZRIpDUGbUltwRlwiPfXyg54f",
+        "pdf": "/pdfs/journal-pdfs/j1.pdf"
+    },
+    "J2": {
+        "title": "Untitled",
+        "img": "/journal-images/j2.png",
+        "author": "Mark Franta",
+        "date": "April 2024",
+        "mailing_address": "Mark Franta, #1086506 SDCC PO Box 208 Indian Springs, NV, 89070-0208",
+        "pdf-url": "https://v5.airtableusercontent.com/v3/u/28/28/1713931200000/FLR3HUtaBmF04fkKJhgrkA/c8abul3clHzLbWh1PwFDLyj5zbhd3mMnICER4rFmtXm_MLIlIvTvRuGR8rwNi927lquSvNjtEiKxISmhlHD2VRJY9PG9k5KWVdg19DNlkR6Q8sn0RHkZ1Q4jWXZWur0asHiqfmI-H-9aJ6Dbkxktc33j7ZwgHmNsRb6EDVMmI4k/ApjypneuDdcmq-qtlcxG-EkyyOGB1NXrpqAoEXQWf7s",
+        "pdf": "/pdfs/journal-pdfs/j2.pdf"
+    },
+    "J3": {
+        "title": "Unfiltered Adult Literacy",
+        "img": "/journal-images/j3.png",
+        "author": "William James Jonas III",
+        "date": "April 2024",
+        "mailing_address": "William James Jonas III, #66834-380 FC Institution Gilmer PO Box 6000  Glenville, WV, 26351",
+        "pdf-url": "https://v5.airtableusercontent.com/v3/u/28/28/1713931200000/vGrJ4OEpQuOzXkIGab5O1g/YknMRHhDYymQuMsVUJpcvCAPWKgkzdZKK1DwYf558CG0aRxmmTnNvGqj1BHnEhc_sUxKm8IktJAwDBLWOVNCJ38KifahPP7Xn-EyEaAjx1-oM-rQq5Yo0F7U0shHxFqgMQHHh_gBgR6Vj5MsvXMpqQ/QYg-NZqxU01ngR8lpX4TsuLUqsqoW65QgLNVBCyyO0E",
+        "pdf": "/pdfs/journal-pdfs/j3.pdf"
+    },
+    "J4": {
+        "title": "Insiders Zine: Issue 2",
+        "img": "/journal-images/j4.png",
+        "author": "Joseph Nichols",
+        "date": "March 2024",
+        "mailing_address": "Joseph Nichols, #21647-075 FCI Williamsburg PO Box 340 Salters, SC, 29590",
+        "pdf-url": "https://v5.airtableusercontent.com/v3/u/28/28/1713931200000/mHipXuOBK0JgUNNW71If3g/6rzf6xLYbHFG8lOaUfQ6BYmidSiaAuDHip4Bx3NuSB3kFx5q7byHQj_8Y5lKWx3HU6Rxc5xHp8MWUjri3Xew6v_k9OJY0owMSzthOuDwsiukpdHkMbLy0azuFIZjsCRT_3fTr6dD7DiLSTyFmWOtcg/lTFMYKJmOeuIJCLUw0Pyuo9AQJfOw-qkk1i2hf5l73M",
+        "pdf": "/pdfs/journal-pdfs/j4.pdf"
+    },
+    "J5": {
+        "title": "Journal Entry",
+        "img": "/journal-images/j5.png",
+        "author": "Omar Recalde",
+        "date": "March 2024",
+        "mailing_address": "Omar Recalde, #70825-053 Federal Correction Institution Yazoo City PO Box 5000 Yazoo City , MS, 39194",
+        "pdf-url": "https://v5.airtableusercontent.com/v3/u/28/28/1713931200000/Gi7zyVd4lBSts82y67j1Nw/NG2WxysgSj1ODvXDRFr_amnCZ8kFTuKIVxYgDTmrUG70OY609ibEQu0_VlhHlwoZ7QTLOlmnwkfHpopZJjM4M2VuJ4ozv8EkLiAgnCqSR6pmM-hd-Md4tgC18sss3qwXiUremONrLtM0ju6NWP7Znn-G_gpCoqfyriExzAcbd1E/ehmlXLh8Rukn20mUaLJCgCsDiOWR_IznBJeFQmc8YQ8",
+        "pdf": "/pdfs/journal-pdfs/j5.pdf"
+    },
+    "J6": {
+        "title": "Age Old Wisdom - 'The Cycle of Courage'",
+        "img": "/journal-images/j6.png",
+        "author": "Kirk Ashton",
+        "date": "March 2024",
+        "mailing_address": "Kirk Ashton, #B225053 Clinton CF  PO Box 2001 Dannemora, NY, 12929",
+        "pdf-url": "",
+        "pdf": "/pdfs/journal-pdfs/j6.pdf"
+    },
+    "J7": {
+        "title": "Journal Program",
+        "img": "/journal-images/j7.png",
+        "author": "Jerome Washington",
+        "date": "March 2024",
+        "mailing_address": "Jerome Washington, #HV0282 Smart Communications SCI Forest PO Box 33028 St Petersburg, FL, 33733",
+        "pdf-url": " https://v5.airtableusercontent.com/v3/u/28/28/1713931200000/5u-IRZQCMrNG8xsdBo2Igw/f2EqX4xRqyGOuZL6J8f7_jQz2eXhyrJAdwVxmoLbC3lNez85RnQCCfPln_5MELOu-ujx8Toq6AMkKUvAGhLBijq2NkeC2XdyvxLQU6L7BGG7XNAnBEKRPeL-7mgrIYiyZs5eWUXh0-ER9KHMza5NYP7J0zHbFtW6Fmrkd3I9-v0/eOrbmTawM1o0gM7axe11UiFiBcXO1ggnnUIT9qd29cg",
+        "pdf": "/pdfs/journal-pdfs/j7.pdf"
+    },
+    "J8": {
+        "title": "Halo Rain",
+        "img": "/journal-images/j8.png",
+        "author": "Chuck Graham",
+        "date": "February 2024",
+        "mailing_address": "Chuck Graham, #16B2537 Sing Sing Correctional Facility 354 Hunter Street Ossining, NY, 10562-5442",
+        "pdf-url": "https://v5.airtableusercontent.com/v3/u/28/28/1713931200000/dMy81MhMFa47k-cKhylglg/Fzr1neUcuQ6pLJpJWGfPKhFmWtSVW1m932Fbwv589uInwDh5XDFDXUqhG2-WQXbZUqQ435Thr0vIsPSNcOwbtkJxN-mPnVfpWDkviiGqDQfHlfzz9Ln6mjDVCY1qgJ2AKFzVSfKmGSugsYnZ9TiSS_Rs0wur3SDb3obrfyNlKQM/Nu-_6SgHuXD3d7vEkh2AJ3LKm5KH5zVDgRFYKX6jHJ0",
+        "pdf": "/pdfs/journal-pdfs/j8.pdf"
+    },
+    "J9": {
+        "title": "Who Taught Us To Love Thy Enemy",
+        "img": "/journal-images/j9.png",
+        "author": "Nkrumah Lumumba Valier",
+        "date": "February 2024",
+        "mailing_address": "Nkrumah Lumumba Valier, #1546714 TDCJ Terrell Unit PO BOX 660400 Dallas, TX, 75266-0400",
+        "pdf-url": "https://v5.airtableusercontent.com/v3/u/28/28/1713931200000/k53g72SuJ2eAo0IBcD1kSw/lyyiY_hpHuzHS1-HVGVCkDWtyQum4rpBqKFt1pHHy7O868NJv__ZKbpf8o9vBC1xgSUayYIwCmORHqqHSnKelgGpSF4SDog3KUXkVCymLhbygstSh96RTlpju1_6VGU3ucA18T7WOa861szL8pva-w/6zPQwSrgNnqCRJlYK1uZyqoXiJ-v-SLxIKHz2jZ7b8g",
+        "pdf": "/pdfs/journal-pdfs/j9.pdf"
+    },
+    "J10": {
+        "title": "Sunday,The 4th, Feb 2024",
+        "img": "/journal-images/j10.png",
+        "author": "Pete Gonzales",
+        "date": "February 2024",
+        "mailing_address": "Pete Gonzales, #1699461 TDCJ Gib Lewis PO BOX 660400 Dallas, TX, 75266-0400",
+        "pdf-url": "https://v5.airtableusercontent.com/v3/u/28/28/1713931200000/LyJe4DtueZaF-OuRbt8GVQ/UlHAUkASVHDozD2hWDfdYCrMAuvHO7R4dc8uFznCGoyxt-g49KhdfLS82NUCXCkl4RvSVNBT4rN3o-EXJZlLelWKllCMWMqZU2n6gZtrrVvBGXt9WXN6x532tAvyfBxxX6Vq1uAVgUAogQ0cnobIGe7FteT3zCUOs5qfSvCRli0/q7kPjC9DHVw99BdbOpo0BKJDn6sthBpT8hwF6B0QjBE",
+        "pdf": "/pdfs/journal-pdfs/j10.pdf"
     }
 
 }

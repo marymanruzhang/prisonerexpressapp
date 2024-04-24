@@ -77,7 +77,10 @@ export default {
     <b-modal v-if="selectedFixture && work_type !='art'"
     id="my-modal"
     hide-footer >
-    <VuePdfEmbed annotation-layer text-layer :source="selectedFixture['pdf']"/>
+    <p v-if="selectedFixture['mailing_address']" align="center"> Mailing Address: {{selectedFixture['mailing_address']}}</p>
+    <VuePdfEmbed  v-if="selectedFixture['pdf']" annotation-layer text-layer :source="selectedFixture['pdf']"/>
+    <p  align="center">{{ selectedFixture['title'] }}</p>
+    <p>{{ selectedFixture['essay'] }}</p>
     </b-modal>
 
 
