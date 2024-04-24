@@ -2,7 +2,7 @@
     "poetry": {
         "name": "Poetry",
         "img": "manuscript.png",
-        "description": "Participants given the opportunity to freely express themselves through writing, in any format that they desire."
+        "description": "Participants given the opportunity to freely express themselves through writing."
     },
     "journal": {
         "name": "Journal",
@@ -12,7 +12,7 @@
     "essays": {
         "name": "Essays",
         "img": "contract.png",
-        "description": "Writers are given a Word Theme and a Picture Theme and encouraged to submit writing for each theme."
+        "description": "Writers are given a Word Theme and a Picture Theme to submit writing for each theme."
     },
     "art": {
         "name": "Art",

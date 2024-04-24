@@ -3,7 +3,10 @@
     <div class="saved-programs-container">
       <b-container>
         <div v-if="savedPrograms.length === 0" class="no-saved-message">
+          <img src="/public/images/saved-images/learning.png" alt="Options" class="image-saved">
+        <div class="text">
           It seems you have nothing saved, you should add a program!!
+          </div>
         </div>
 
         <b-row v-else>
@@ -104,6 +107,7 @@ export default {
   align-self: center;
   margin-top: auto;
 }
+
 
 .global-content-padding {
     padding-bottom: 100px;

@@ -1,17 +1,6 @@
 <template>
   <div class="global-content-padding">
     <b-container fluid>
-      <b-row class="header">
-        <b-col cols="2" class="sidebar-toggle">
-          <img src="/public/images/menu.png" alt="Sidebar Toggle" @click="toggleSidebar">
-        </b-col>
-        <b-col cols="8" class="text-center">
-          <img src="/public/images/PrionerExpressBGR.png" alt="Logo" class="logo">
-        </b-col>
-        <b-col cols="2" class="text-right settings-toggle">
-          <img src="/public/images/settings.png" alt="Settings" @click="openSettings">
-        </b-col>
-      </b-row>
       <b-row class="d-flex justify-content-center">
 
         <b-card
@@ -45,19 +34,6 @@
           </b-button>
         </div>
       </b-row>
-      <div v-if="isSidebarOpen" class="sidebar">
-        <p>Sidebar Content</p>
-        <b-button @click="toggleSidebar">Close Sidebar</b-button>
-      </div>
-      <div v-if="isSettingsOpen" class="settings-modal">
-        <div class="settings-modal">
-          <p>You can change the page to dark mode!!!</p>
-          <b-button @click="toggleAppDarkMode" class="mb-3">
-            {{ darkMode ? 'Disable Dark Mode' : 'Enable Dark Mode' }}
-          </b-button>
-          <b-button @click="closeSettings" class="mb-3">Close Settings</b-button>
-        </div>
-      </div>
     </b-container>
 
     <div class = newsletters>
@@ -74,9 +50,6 @@
 import { useRoute, useRouter } from 'vue-router';
 import { ref } from 'vue';
 const router = useRouter();
-const isSidebarOpen = ref(false);
-const isSettingsOpen = ref(false);
-const darkMode = ref(false);
 
 import VuePdfEmbed from 'vue-pdf-embed';
 import 'vue-pdf-embed/dist/style/index.css';
@@ -116,28 +89,6 @@ function goToDetail(name) {
   router.push({ name: 'detail', params: { itemName: name } });
   console.log("Navigated to:", name);
 }
-
-function toggleSidebar() {
-  isSidebarOpen.value = !isSidebarOpen.value;
-  console.log("Sidebar toggled", isSidebarOpen.value);
-}
-
-function openSettings() {
-  isSettingsOpen.value = true;
-  console.log("Settings opened");
-}
-
-function closeSettings() {
-  isSettingsOpen.value = false;
-  console.log("Settings closed");
-}
-
-function toggleAppDarkMode() {
-  darkMode.value = !darkMode.value;
-  localStorage.setItem('darkMode', darkMode.value);
-  document.body.classList.toggle('dark-theme', darkMode.value);
-}
-
 </script>
 
 <style>
@@ -345,6 +296,7 @@ b-card.highlight{
   overflow: hidden;
   padding: 5px;
   transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 40px 40px 40px rgba(0, 0, 0, 0.25);
 }
 
 .h_text {
