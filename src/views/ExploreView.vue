@@ -136,26 +136,6 @@ body {
     2px 1px 0 #000
 }
 
-.logo {
-  width: 200px;
-  transition: transform 0.3s ease;
-  transform: translateY(-30px);
-}
-
-.logo:hover {
-  transform: scale(1.05) translateY(-30px);
-}
-
-.sidebar-toggle img, .settings-toggle img {
-  cursor: pointer;
-  width: 30px;
-  transition: transform 0.3s ease;
-}
-
-.sidebar-toggle img:hover, .settings-toggle img:hover {
-  transform: scale(1.2);
-}
-
 .tiles {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -188,48 +168,6 @@ b-card.highlight{
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
-.sidebar {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 250px;
-  height: 100%;
-  background: #FFFFFF;
-  box-shadow: 4px 0 15px rgba(0,0,0,0.1);
-  z-index: 1000;
-}
-
-.settings-modal {
-  position: fixed;
-  right: 0;
-  top: 0;
-  width: 300px;
-  height: 100%;
-  background: #FFFFFF;
-  box-shadow: -4px 0 15px rgba(0,0,0,0.1);
-  z-index: 1000;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 50px;
-}
-
-.settings-toggle {
-  text-align: right;
-  justify-content: flex-end;
-  padding-right: 20px;
-  margin-bottom: 40px;
-}
-
-.settings-toggle img {
-  cursor: pointer;
-  width: 30px;
-  transition: transform 0.3s ease;
-}
-
-.settings-toggle img:hover {
-  transform: scale(1.2);
-}
 
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
@@ -257,42 +195,12 @@ b-card.highlight{
   padding-top: 10px;
 }
 
-.header {
-  background-color: #EEEEEE;
-  padding: 2px 0;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  animation: fadeIn 0.5s ease-out;
-}
-
-.sidebar-toggle img, .settings-toggle img {
-  cursor: pointer;
-  transition: transform 0.3s ease;
-  width: 35px;
-}
-
-.sidebar-toggle img:hover, .settings-toggle img:hover {
-  transform: scale(1.2);
-}
-
-.logo {
-  width: 100px;
-  transition: transform 0.3s ease;
-  transform: translateY(-5px);
-}
-
-.logo:hover {
-  transform: scale(1.05) translateY(-5px);
-}
 
 .b-col {
   padding: 0;
 }
 
-.header .text-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 .global-content-padding {
     padding-bottom: 100px;
 }
