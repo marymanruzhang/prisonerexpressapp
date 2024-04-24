@@ -345,6 +345,4 @@ b-card.highlight{
   box-shadow: -4px 0 15px rgba(0,0,0,0.1);
   z-index: 1052;
 }
-
-
 </style>
