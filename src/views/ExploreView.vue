@@ -1,7 +1,4 @@
 <template>
-
-<!-- tag="router-link"
-        to="/highlight" -->
   <div class="global-content-padding">
     <b-container fluid>
       <b-row class="d-flex justify-content-center">
@@ -28,8 +25,6 @@
                     </b-img>
                 </b-modal>
       </b-card>
-
-
 
       </b-row>
       <b-row  class="d-flex justify-content-center h1 mt-3"> Explore </b-row>
@@ -120,20 +115,8 @@ body {
 }
 
 .h_text{
-  font-size: 70px;
-  text-shadow:
-    -2px -2px 0 #000,
-    2px -2px 0 #000,
-    -2px 2px 0 #000,
-    2px 2px 0 #000,
-    -1px -2px 0 #000,
-    1px -2px 0 #000,
-    -1px 2px 0 #000,
-    1px 2px 0 #000,
-    -2px -1px 0 #000,
-    2px -1px 0 #000,
-    -2px 1px 0 #000,
-    2px 1px 0 #000
+  font-size: 50px;
+  font-weight: bold;
 }
 
 .tiles {
@@ -235,5 +218,4 @@ body {
   transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 40px 40px 40px rgba(0, 0, 0, 0.25);
 }
-
 </style>

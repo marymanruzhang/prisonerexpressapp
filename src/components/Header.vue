@@ -32,7 +32,6 @@
   </div>
 </template>
 
-
 <script>
 import { ref } from 'vue';
 
@@ -324,8 +323,27 @@ b-card.highlight{
 .dark-theme img {
   filter: brightness(0.8);
 }
-.global-content-padding{
-  position: sticky;
+
+.b-sidebar {
+  z-index: 1050;
+}
+
+.sidebar, .settings-modal {
+  position: fixed;
+  top: 0;
+  width: 250px;
+  max-height: 100vh;
+  overflow-y: auto;
+  box-shadow: 4px 0 15px rgba(0,0,0,0.1);
+  background: #FFFFFF;
+  z-index: 1051;
+}
+
+.settings-modal {
+  width: 300px;
+  right: 0;
+  box-shadow: -4px 0 15px rgba(0,0,0,0.1);
+  z-index: 1052;
 }
 
 

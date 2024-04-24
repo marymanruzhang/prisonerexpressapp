@@ -91,13 +91,13 @@ export default {
 
 
 .centered-card {
-  z-index: 11; /* Higher than overlay */
-  width: 50%; /* Or any other percentage or fixed width depending on design needs */
-  max-width: 700px; /* Maximum width to avoid very wide cards on larger screens */
-  min-width: 400px; /* Minimum width to maintain readability */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds shadow for better visibility */
+  z-index: 11;
+  width: 50%;
+  max-width: 700px;
+  min-width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease-out;
-  transform: scale(1.05); /* Slightly larger to stand out */
+  transform: scale(1.05);
 }
 
 .dim {
@@ -122,47 +122,41 @@ export default {
 
 .pdf-container{
 
-  width: 100%; /* Adjust width as necessary */
-  height: 90vh; /* Adjust height to provide sufficient space for the PDF */
-  overflow-y: auto; /* Allows scrolling within the PDF container if needed */
+  width: 100%;
+  height: 90vh;
+  overflow-y: auto;
 
 }
 
-/* General styling for all b-cards */
 .stylish-card {
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition for hover effects */
-  border: none; /* Remove default border */
-  border-radius: 10px; /* Rounded corners for a softer look */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border: none;
+  border-radius: 10px;
 }
 
-/* Shadow and slight lift on hover */
 .stylish-card:hover {
-  transform: translateY(-5px); /* Slightly lift the card */
-  box-shadow: 0 4px 20px rgba(0,0,0,0.25); /* Soft shadow for depth */
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
 }
 
-/* Card image styling */
 .stylish-card .card-img {
-  border-top-left-radius: 10px; /* Rounded top-left corner */
-  border-top-right-radius: 10px; /* Rounded top-right corner */
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
-/* Card body styling */
 .stylish-card .card-body {
-  padding: 20px; /* More padding for better spacing */
+  padding: 20px;
 }
 
-/* Card title styling */
 .stylish-card .card-title {
-  color: #333; /* Darker text for better readability */
-  font-size: 30px; /* Larger font size */
-  font-weight: bold; /* Bold for emphasis */
+  color: #333;
+  font-size: 30px;
+  font-weight: bold;
 }
 
-/* Card text styling */
 .stylish-card .card-text {
-  color: #666; /* Grayish text for subtle appearance */
-  margin-top: 10px; /* Spacing between title and text */
+  color: #666;
+  margin-top: 10px; 
 }
 
 
