@@ -128,17 +128,6 @@ body {
   margin: 20px auto;
 }
 
-.tile {
-  background-color: #FFFFFF;
-  color: #333333;
-  border-radius: 10px;
-  padding: 20px;
-  cursor: pointer;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
 .tile:hover {
   transform: translateY(-3px);
   color: #FFFFFF;
@@ -210,12 +199,40 @@ body {
   padding: -10%;
 }
 
+.highlight img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .highlight {
   height: 300px;
   position: relative;
   overflow: hidden;
-  padding: 5px;
+  padding: 0;
   transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 40px 40px 40px rgba(0, 0, 0, 0.25);
+  border: none;
+  cursor: pointer;
 }
+
+.tile {
+  background-color: #FFFFFF;
+  color: #333333;
+  border-radius: 10px;
+  padding: 20px;
+  cursor: pointer;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+}
+
+.tile:hover {
+  transform: translateY(-3px);
+  background-color: grey;
+  color: #FFFFFF;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
 </style>
