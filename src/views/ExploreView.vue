@@ -15,14 +15,28 @@
     </div>
   </div>
 
-  <div class = newsletters>
-  <b-button v-for="(pdf, index) in pdfSources" :key="index" @click="selectPdf(index)">
-      {{ pdfNames[index] }}
-  </b-button>
 
+  <div class = newsletters>
+    <p class = "header"> Read our past newsletters! </p>
+
+    <b-carousel :interval="5000" controls indicators img-width="1024"
+      img-height="480"
+      style="text-shadow: 1px 1px 2px #333;"
+      @sliding-start="onSlideStart"
+      @sliding-end="onSlideEnd">
+    <b-carousel-slide v-for="(pdf, index) in pdfSources" :key="index" @click="selectPdf(index)"
+    :img-src="imageRoutes[index]" >
+      <p class = "caption"> {{ pdfNames[index]}} </p>
+    </b-carousel-slide>
+    </b-carousel>
+
+  <!-- <b-button v-for="(pdf, index) in pdfSources" :key="index" @click="selectPdf(index)">
+      {{ pdfNames[index] }}
+  </b-button> -->
 
   <b-modal v-model="showPdfViewer" title="PDF Viewer" @hidden="closePdfViewer"> <VuePdfEmbed :source="selectedPdf" /> </b-modal>
   </div>
+
 
 </template>
 
@@ -37,22 +51,6 @@ import 'vue-pdf-embed/dist/style/index.css';
 
 const slide = ref(0);
 
-const pdfSources = [
-  "/pdfs/winter24.pdf",
-  "/pdfs/summer23.pdf",
-  "/pdfs/winter23.pdf",
-  "/pdfs/summer22.pdf",
-  "/pdfs/winter22.pdf"
-];
-
-const pdfNames = [
-  "Winter 2024",
-  "Summer 2023",
-  "Winter 2023",
-  "Summer 2022",
-  "Winter 2022",
-];
-
 const selectedPdf = ref(null);
 const showPdfViewer = ref(false);
 
@@ -66,13 +64,37 @@ const closePdfViewer = () => {
   showPdfViewer.value = false;
 };
 
+const pdfSources = [
+    "/pdfs/winter24.pdf",
+    "/pdfs/summer23.pdf",
+    "/pdfs/winter23.pdf",
+    "/pdfs/summer22.pdf",
+    "/pdfs/winter22.pdf"
+  ];
+
+  const pdfNames = [
+    "Winter 2024",
+    "Summer 2023",
+    "Winter 2023",
+    "Summer 2022",
+    "Winter 2022",
+  ];
+
+  const imageRoutes = [
+    "images/winter24.jpg",
+    "images/summer23.jpg",
+    "images/winter23.jpg",
+    "images/summer22.jpg",
+    "images/winter22.jpg"
+  ]
+
 function goToDetail(name) {
   router.push({ name: 'detail', params: { itemName: name } });
   console.log("Navigated to:", name);
 }
 </script>
 
-<style>
+<style >
 html {
   background-color: #F5F5DC;
 }
@@ -117,6 +139,17 @@ html {
   background-color: #FFA500;
   color: #FFFFFF;
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.newsletters {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.caption {
+  font-size: 40px;
 }
 
 @keyframes fadeIn {

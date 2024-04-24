@@ -5,6 +5,8 @@ import PoetryFixtures from './PoetryFixtures.json';
 import EssayFixtures from './EssayFixtures.json';
 import JournalFixtures from './JournalFixtures.json';
 import faqFixtures from './faqFixtures.json';
+import newsletter_fixtures from './newsletter_fixtures.json';
+import program_fixtures from './program_fixtures.json';
 
 
 // main.js/ts
@@ -31,9 +33,9 @@ app.config.globalProperties.fixtures = {
 
 };
 
-app.config.globalProperties.baseDir = import.meta.env.BASE_URL;
 
-import program_fixtures from './program_fixtures.json'
 app.config.globalProperties.program_fixtures = program_fixtures;
+app.config.globalProperties.newsletter_fixtures = newsletter_fixtures;
+
 app.config.globalProperties.baseDir = import.meta.env.BASE_URL;
 app.mount('#app')
