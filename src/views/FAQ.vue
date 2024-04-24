@@ -6,7 +6,7 @@
         <p>Below are frequently asked questions</p>
       </div>
     <BAccordion>
-      <div v-for="(faq, index) in faqData" :key="index" class="accordion-item-wrapper">
+      <div v-for="(faq, index) in fixtures.faq" :key="index" class="accordion-item-wrapper">
         <BAccordionItem :title="faq.title" :visible="faq.visible">
            {{ faq.answer }}
         </BAccordionItem>
@@ -17,10 +17,8 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
-import faqData from '@/faqFixtures.json';
-
-const faqItems = ref(faqData);
+// import { ref } from 'vue';
+// const faqItems = ref(fixtures.faq);
 </script>
 
 <style scoped>

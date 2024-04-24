@@ -18,7 +18,7 @@
         tag="router-link"
         to="/highlight"
         v-for="(item) in fixtures.highlight"
-        img-src="/public/images/highlight.png"
+        img-src="/public/images/highlight-image/highlight.png"
         img-alt="Card image"
         class=" highlight mt-5 w-75"
         img-top
@@ -79,11 +79,11 @@ import 'vue-pdf-embed/dist/style/index.css';
 const slide = ref(0);
 
 const pdfSources = [
-  "/pdfs/winter24.pdf",
-  "/pdfs/summer23.pdf",
-  "/pdfs/winter23.pdf",
-  "/pdfs/summer22.pdf",
-  "/pdfs/winter22.pdf"
+  "/pdfs/newsletter-pdfs/winter24.pdf",
+  "/pdfs/newsletter-pdfs/summer23.pdf",
+  "/pdfs/newsletter-pdfs/winter23.pdf",
+  "/pdfs/newsletter-pdfs/summer22.pdf",
+  "/pdfs/newsletter-pdfs/winter22.pdf"
 ];
 
 const pdfNames = [
