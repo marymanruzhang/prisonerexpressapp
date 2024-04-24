@@ -141,42 +141,59 @@ body {
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   justify-content: center;
-  width: 100%;
-  max-width: 1200px;
+  padding: 0 50px;
   margin: 20px auto;
 }
 
 .tile {
   background-color: #FFFFFF;
   color: #333333;
-  border: 2px solid #FFA500;
-  border-radius: 15px;
+  border-radius: 10px;
   padding: 20px;
   cursor: pointer;
   text-align: center;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
 }
-b-card.highlight{
-  height:30%;
-}
 
-.tile:hover, .highlight:hover {
-  transform: translateY(-5px);
-  background-color: #007BFF;
+.tile:hover {
+  transform: translateY(-3px);
   color: #FFFFFF;
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
+@media (max-width: 600px) {
+  .tiles {
+    padding: 0 20px;
+    gap: 10px;
+  }
+
+  .tile {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tiles {
+    grid-template-columns: 1fr; /* Only one tile per row */
+    padding: 0 10px;
+  }
+
+  .tile {
+    padding: 5px;
+  }
+}
+
+.tile:hover {
+  transform: translateY(-3px);
+  background-color: grey;
+  color: #FFFFFF;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
 
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
-}
-.tile-image {
-  width: 100%;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
 }
 
 .tile-header {
@@ -195,11 +212,9 @@ b-card.highlight{
   padding-top: 10px;
 }
 
-
 .b-col {
   padding: 0;
 }
-
 
 .global-content-padding {
     padding-bottom: 100px;
@@ -219,46 +234,6 @@ b-card.highlight{
   padding: 5px;
   transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 40px 40px 40px rgba(0, 0, 0, 0.25);
-}
-
-.h_text {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  font-size: 2em;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1;
-}
-
-.dark-theme {
-  background-color: #121212;
-  color: #e0e0e0;
-}
-
-.dark-theme .header, .dark-theme .settings-modal, .dark-theme .sidebar {
-  background-color: #333;
-  color: #ffffff;
-}
-
-.dark-theme .tile, .dark-theme .highlight {
-  background-color: #424242;
-  color: #ffffff;
-  border-color: #616161;
-}
-
-.dark-theme .tile:hover, .dark-theme .highlight:hover {
-  background-color: #535353;
-  color: #ffffff;
-  box-shadow: 0 12px 24px rgba(255, 255, 255, 0.12);
-}
-
-.dark-theme img {
-  filter: brightness(0.8);
 }
 
 </style>

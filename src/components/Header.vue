@@ -1,32 +1,34 @@
 <template>
   <div class="global-content-padding">
-    <b-container fluid>
-      <b-row class="header">
-        <b-col cols="2" class="sidebar-toggle">
-          <img src="/public/images/menu.png" alt="Sidebar Toggle" @click="toggleSidebar">
-        </b-col>
-        <b-col cols="8" class="text-center">
-          <img src="/public/images/PrionerExpressBGR.png" alt="Logo" class="logo">
-        </b-col>
-        <b-col cols="2" class="text-right settings-toggle">
-          <img src="/public/images/settings.png" alt="Settings" @click="openSettings">
-        </b-col>
-      </b-row>
+    <b-sidebar>
+      <b-container fluid>
+        <b-row class="header">
+          <b-col cols="2" class="sidebar-toggle">
+            <img src="/public/images/menu.png" alt="Sidebar Toggle" @click="toggleSidebar">
+          </b-col>
+          <b-col cols="8" class="text-center">
+            <img src="/public/images/PrionerExpressBGR.png" alt="Logo" class="logo">
+          </b-col>
+          <b-col cols="2" class="text-right settings-toggle">
+            <img src="/public/images/settings.png" alt="Settings" @click="openSettings">
+          </b-col>
+        </b-row>
 
-      <div v-if="isSidebarOpen" class="sidebar">
-        <p>Sidebar Content</p>
-        <b-button @click="toggleSidebar">Close Sidebar</b-button>
-      </div>
-      <div v-if="isSettingsOpen" class="settings-modal">
-        <div class="settings-modal">
-          <p>You can change the page to dark mode!!!</p>
-          <b-button @click="toggleAppDarkMode" class="mb-3">
-            {{ darkMode ? 'Disable Dark Mode' : 'Enable Dark Mode' }}
-          </b-button>
-          <b-button @click="closeSettings" class="mb-3">Close Settings</b-button>
+        <div v-if="isSidebarOpen" class="sidebar">
+          <p>Sidebar Content</p>
+          <b-button @click="toggleSidebar">Close Sidebar</b-button>
         </div>
-      </div>
-    </b-container>
+        <div v-if="isSettingsOpen" class="settings-modal">
+          <div class="settings-modal">
+            <p>You can change the page to dark mode!!!</p>
+            <b-button @click="toggleAppDarkMode" class="mb-3">
+              {{ darkMode ? 'Disable Dark Mode' : 'Enable Dark Mode' }}
+            </b-button>
+            <b-button @click="closeSettings" class="mb-3">Close Settings</b-button>
+          </div>
+        </div>
+      </b-container>
+    </b-sidebar>
   </div>
 </template>
 
@@ -73,9 +75,6 @@ export default {
   }
 }
 </script>
-
-
-
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Jacquard+12+Charted&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
@@ -161,29 +160,29 @@ b-card.highlight{
 }
 
 .sidebar {
-  position: fixed;
   left: 0;
   top: 0;
   width: 250px;
   height: 100%;
   background: #FFFFFF;
   box-shadow: 4px 0 15px rgba(0,0,0,0.1);
-  z-index: 1000;
+  position: fixed;
+  z-index: 1001;
 }
 
 .settings-modal {
-  position: fixed;
   right: 0;
   top: 0;
   width: 300px;
   height: 100%;
   background: #FFFFFF;
   box-shadow: -4px 0 15px rgba(0,0,0,0.1);
-  z-index: 1000;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   padding: 50px;
+  position: fixed;
+  z-index: 1001;
 }
 
 .settings-toggle {
@@ -191,12 +190,14 @@ b-card.highlight{
   justify-content: flex-end;
   padding-right: 20px;
   margin-bottom: 40px;
+  z-index: 1000;
 }
 
 .settings-toggle img {
   cursor: pointer;
   width: 30px;
   transition: transform 0.3s ease;
+  z-index: 1000;
 }
 
 .settings-toggle img:hover {
@@ -326,4 +327,6 @@ b-card.highlight{
 .global-content-padding{
   position: sticky;
 }
+
+
 </style>

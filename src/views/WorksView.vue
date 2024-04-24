@@ -34,52 +34,54 @@ export default {
 </script>
 
 <template>
-<b-container >
-  <b-row>
-   <p align = "center" class = "uppercase"> {{this.work_type}} Collection</p>
-  </b-row>
-  <b-row>
-    <b-card v-b-modal.my-modal
-      class="work_card stylish-card"
-      v-for="(fixture, key) in fixturesList"
-      :key="key"
-      @click="selectFixture(fixture)"
-    >
-      <div class="card-body">
-        <b-row>
-          <b-col v-if="fixture['img']">
-            <img class="work_img card-img" :src="`${baseDir}images/${fixture['img']}`">
-          </b-col>
-          <b-col class="d-flex flex-column justify-content-center align-items-center">
-            <h3 align = "center" v-if="fixture['title']" class="card-title">{{ fixture["title"] }}</h3>
-            <h6  align = "center" v-if="fixture['author']" class="card-text">by: {{ fixture["author"] }}</h6>
-            <h6  class="card-text" align = "center" v-if="fixture['date']">Published: {{ fixture["date"] }}</h6>
-            <h6  class="card-text" align = "center" v-if="fixture['newsletter']">Featured in {{ fixture["newsletter"] }}</h6>
-          </b-col>
-        </b-row>
-      </div>
-  <b-modal v-if="selectedFixture && work_type ==='art'"
-    id="my-modal"
-    hide-footer >
-      <div class="card-body">
-        <img class="w-100 h-75" :src="`${baseDir}images/${selectedFixture['img']}`">
-      </div>
-    </b-modal>
+<div class="global-programs-container">
+  <b-container >
+    <b-row>
+    <p align = "center" class = "uppercase"> {{this.work_type}} Collection</p>
+    </b-row>
+    <b-row>
+      <b-card v-b-modal.my-modal
+        class="work_card stylish-card"
+        v-for="(fixture, key) in fixturesList"
+        :key="key"
+        @click="selectFixture(fixture)"
+      >
+        <div class="card-body">
+          <b-row>
+            <b-col v-if="fixture['img']">
+              <img class="work_img card-img" :src="`${baseDir}images/${fixture['img']}`">
+            </b-col>
+            <b-col class="d-flex flex-column justify-content-center align-items-center">
+              <h3 align = "center" v-if="fixture['title']" class="card-title">{{ fixture["title"] }}</h3>
+              <h6  align = "center" v-if="fixture['author']" class="card-text">by: {{ fixture["author"] }}</h6>
+              <h6  class="card-text" align = "center" v-if="fixture['date']">Published: {{ fixture["date"] }}</h6>
+              <h6  class="card-text" align = "center" v-if="fixture['newsletter']">Featured in {{ fixture["newsletter"] }}</h6>
+            </b-col>
+          </b-row>
+        </div>
+    <b-modal v-if="selectedFixture && work_type ==='art'"
+      id="my-modal"
+      hide-footer >
+        <div class="card-body">
+          <img class="w-100 h-75" :src="`${baseDir}images/${selectedFixture['img']}`">
+        </div>
+      </b-modal>
 
-    <b-modal v-if="selectedFixture && work_type !='art'"
-    id="my-modal"
-    hide-footer >
-    <p v-if="selectedFixture['mailing_address']" align="center"> Mailing Address: {{selectedFixture['mailing_address']}}</p>
-    <VuePdfEmbed  v-if="selectedFixture['pdf']" annotation-layer text-layer :source="selectedFixture['pdf']"/>
-    <p  align="center">{{ selectedFixture['title'] }}</p>
-    <p>{{ selectedFixture['essay'] }}</p>
-    </b-modal>
+      <b-modal v-if="selectedFixture && work_type !='art'"
+      id="my-modal"
+      hide-footer >
+      <p v-if="selectedFixture['mailing_address']" align="center"> Mailing Address: {{selectedFixture['mailing_address']}}</p>
+      <VuePdfEmbed  v-if="selectedFixture['pdf']" annotation-layer text-layer :source="selectedFixture['pdf']"/>
+      <p  align="center">{{ selectedFixture['title'] }}</p>
+      <p>{{ selectedFixture['essay'] }}</p>
+      </b-modal>
 
 
 
-    </b-card>
-  </b-row>
-</b-container>
+      </b-card>
+    </b-row>
+  </b-container>
+</div>
 </template>
 
 
@@ -183,5 +185,9 @@ export default {
   text-transform: uppercase;
   font-size: 40px;
   font-family: 'Dancing Script', cursive;
+}
+
+.global-programs-container {
+    padding-bottom: 100px;
 }
 </style>
