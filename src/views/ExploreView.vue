@@ -1,69 +1,69 @@
 <template>
-  <b-container fluid>
-    <b-row class="header">
-      <b-col cols="2" class="sidebar-toggle">
-        <img src="/public/images/menu.png" alt="Sidebar Toggle" @click="toggleSidebar">
-      </b-col>
-      <b-col cols="8" class="text-center">
-        <img src="/public/images/PrionerExpressBGR.png" alt="Logo" class="logo">
-      </b-col>
-      <b-col cols="2" class="text-right settings-toggle">
-        <img src="/public/images/settings.png" alt="Settings" @click="openSettings">
-      </b-col>
-    </b-row>
-    <b-row class="d-flex justify-content-center">
+  <div class="global-content-padding">
+    <b-container fluid>
+      <b-row class="header">
+        <b-col cols="2" class="sidebar-toggle">
+          <img src="/public/images/menu.png" alt="Sidebar Toggle" @click="toggleSidebar">
+        </b-col>
+        <b-col cols="8" class="text-center">
+          <img src="/public/images/PrionerExpressBGR.png" alt="Logo" class="logo">
+        </b-col>
+        <b-col cols="2" class="text-right settings-toggle">
+          <img src="/public/images/settings.png" alt="Settings" @click="openSettings">
+        </b-col>
+      </b-row>
+      <b-row class="d-flex justify-content-center">
 
-      <b-card
-      tag="router-link"
-      to="/highlight"
-      v-for="(item) in fixtures.highlight"
-      img-src="/public/images/highlight.png"
-      img-alt="Card image"
-      class=" highlight mt-5 w-75"
-      img-top
-      overlay
+        <b-card
+        tag="router-link"
+        to="/highlight"
+        v-for="(item) in fixtures.highlight"
+        img-src="/public/images/highlight.png"
+        img-alt="Card image"
+        class=" highlight mt-5 w-75"
+        img-top
+        overlay
+      >
+          <span class="text-white font-weight-bold h_text d-flex"
+          style="align-items: center; justify-content: center; height: 100%;">Highlighted Work</span>
 
-    >
-        <span class="text-white font-weight-bold h_text d-flex"
-        style="align-items: center; justify-content: center; height: 100%;">Highlighted Work</span>
+      </b-card>
 
-    </b-card>
-
-    </b-row>
-    <b-row  class="d-flex justify-content-center h1 mt-3"> Explore </b-row>
-    <b-row>
-      <div class="tiles">
-        <b-button v-for="(item, work_type) in fixtures.explore" :key="item.name" class="tile" @click="goToDetail(item.name)"
-        :to="`/works/${work_type}`">
-          <div class="tile-header">
-            <img :src="`/public/images/${work_type}/${item.image}`" alt="Tile Image" class="tile-image">
-            <img src="/public/images/menu-dots.png" alt="Options" class="menu-dots">
-          </div>
-          <div class="tile-content">
-            <h3>{{ item.name }}</h3>
-            <p>{{ item.description }}</p>
-          </div>
-        </b-button>
+      </b-row>
+      <b-row  class="d-flex justify-content-center h1 mt-3"> Explore </b-row>
+      <b-row>
+        <div class="tiles">
+          <b-button v-for="(item, work_type) in fixtures.explore" :key="item.name" class="tile" @click="goToDetail(item.name)"
+          :to="`/works/${work_type}`">
+            <div class="tile-header">
+              <img :src="`/public/images/${work_type}/${item.image}`" alt="Tile Image" class="tile-image">
+              <img src="/public/images/menu-dots.png" alt="Options" class="menu-dots">
+            </div>
+            <div class="tile-content">
+              <h3>{{ item.name }}</h3>
+              <p>{{ item.description }}</p>
+            </div>
+          </b-button>
+        </div>
+      </b-row>
+      <div v-if="isSidebarOpen" class="sidebar">
+        <p>Sidebar Content</p>
+        <b-button @click="toggleSidebar">Close Sidebar</b-button>
       </div>
-    </b-row>
-    <div v-if="isSidebarOpen" class="sidebar">
-      <p>Sidebar Content</p>
-      <b-button @click="toggleSidebar">Close Sidebar</b-button>
-    </div>
-    <div v-if="isSettingsOpen" class="settings-modal">
-      <p>Settings Content</p>
-      <b-button @click="closeSettings">Close Settings</b-button>
-    </div>
-  </b-container>
+      <div v-if="isSettingsOpen" class="settings-modal">
+        <p>Settings Content</p>
+        <b-button @click="closeSettings">Close Settings</b-button>
+      </div>
+    </b-container>
 
-  <div class = newsletters>
-  <b-button v-for="(pdf, index) in pdfSources" :key="index" @click="selectPdf(index)">
-      {{ pdfNames[index] }}
-  </b-button>
+    <div class = newsletters>
+    <b-button v-for="(pdf, index) in pdfSources" :key="index" @click="selectPdf(index)">
+        {{ pdfNames[index] }}
+    </b-button>
 
-  <b-modal v-model="showPdfViewer" title="PDF Viewer" @hidden="closePdfViewer"> <VuePdfEmbed :source="selectedPdf" /> </b-modal>
+    <b-modal v-model="showPdfViewer" title="PDF Viewer" @hidden="closePdfViewer"> <VuePdfEmbed :source="selectedPdf" /> </b-modal>
+    </div>
   </div>
-
 </template>
 
 <script setup>
@@ -129,7 +129,6 @@ function closeSettings() {
 
 </script>
 
-
 <style>
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -142,12 +141,6 @@ body {
   animation: fadeIn 3s ease-out;
 }
 
-.header {
-  background-color: #FFFFFF;
-  padding: 10px 0;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  animation: fadeIn 0.5s ease-out;
-}
 
 .h_text{
   font-size: 70px;
@@ -224,7 +217,6 @@ b-card.highlight{
   height:30%;
 }
 
-
 .tile:hover, .highlight:hover {
   transform: translateY(-5px);
   background-color: #007BFF;
@@ -293,5 +285,46 @@ b-card.highlight{
 
 .tile-content {
   padding-top: 10px;
+}
+
+
+.header {
+  background-color: #EEEEEE;
+  padding: 2px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s ease-out;
+}
+
+.sidebar-toggle img, .settings-toggle img {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  width: 35px;
+}
+
+.sidebar-toggle img:hover, .settings-toggle img:hover {
+  transform: scale(1.2);
+}
+
+.logo {
+  width: 100px;
+  transition: transform 0.3s ease;
+  transform: translateY(-5px);
+}
+
+.logo:hover {
+  transform: scale(1.05) translateY(-5px);
+}
+
+.b-col {
+  padding: 0;
+}
+
+.header .text-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.global-content-padding {
+    padding-bottom: 100px;
 }
 </style>

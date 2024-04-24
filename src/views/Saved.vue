@@ -1,7 +1,12 @@
 <template>
+  <div class="global-content-padding">
     <div class="saved-programs-container">
       <b-container>
-        <b-row>
+        <div v-if="savedPrograms.length === 0" class="no-saved-message">
+          You have nothing saved, you should add a program!!
+        </div>
+
+        <b-row v-else>
           <b-col md="4" v-for="(item, index) in savedPrograms" :key="index">
             <b-card class="program" :img-src="`${baseDir}images/${item.img}`">
               <b-card-text>
@@ -14,7 +19,9 @@
         </b-row>
       </b-container>
     </div>
-  </template>
+  </div>
+</template>
+
 
 <script>
 export default {
@@ -42,55 +49,21 @@ export default {
 </script>
 
 <style scoped>
-.programs-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  justify-content: center;
-  background-color: #F5F5DC;
-;
-}
-.save {
-  background-color: beige;
-  color: black;
-  border: none;
-  position: absolute;
-  bottom: 10px;
-  right: 38px;
-  width: 30px;
-}
-.program {
-  max-width: 350px;
-  height: 550px;
-  padding: 50px;
-  text-align: center;
-  margin-bottom: 8%;
-}
-.program:hover {
-  box-shadow: 0 0 10px black;
-}
-.name {
-  font-size: 35px;
-}
-.description {
-  font-size: 15px;
-}
-.undo {
-  background-color: #FF4136;
-  color: white;
-  border: none;
-  cursor: pointer;
-  margin-top: 5px;
-}
-
 .saved-programs-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
   justify-content: center;
-  background-color: #F5F5DC;
+  padding: 20px;
+  background-color: #F0F8FF;
+  min-height: 300px;
+}
+
+.no-saved-message {
+  color: #FF4136;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
 }
 
 .program {
@@ -104,7 +77,7 @@ export default {
   text-align: center;
   margin-bottom: 20px;
   background: #FFFFFF;
-  border: 1px solid #DDD; 
+  border: 1px solid #DDD;
 }
 
 .program:hover {
@@ -130,5 +103,9 @@ export default {
   padding: 10px 20px;
   align-self: center;
   margin-top: auto;
+}
+
+.global-content-padding {
+    padding-bottom: 100px;
 }
 </style>
