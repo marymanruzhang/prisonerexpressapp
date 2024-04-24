@@ -10,7 +10,7 @@
                 <p class="description">{{ item.description }}</p>
               </b-card-text>
               <img class="save" @click="toggleSave(item)"
-                  :src="isSaved(item.name) ? '/images/saved2_active.png' : '/images/saved2.png'" alt="Save" />
+                  :src="isSaved(item.name) ? '/images/saved-images/saved2_active.png' : '/images/saved-images/saved2.png'" alt="Save" />
               <transition name="fade">
                 <p class="save-message" v-if="showSaveMessage && currentSaving === item.name">
                   Saved!

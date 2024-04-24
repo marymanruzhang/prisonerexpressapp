@@ -3,7 +3,7 @@
     <div class="saved-programs-container">
       <b-container>
         <div v-if="savedPrograms.length === 0" class="no-saved-message">
-          You have nothing saved, you should add a program!!
+          It seems you have nothing saved, you should add a program!!
         </div>
 
         <b-row v-else>

@@ -1,21 +1,21 @@
 {
   "journal": {
-    "img": "journals.png",
+    "img": "/explore-images/journals.png",
     "name": "Journals",
     "description": "Browse personal journals from our participants."
   },
   "essay": {
-    "img": "essays.png",
+    "img": "/explore-images/essays.png",
     "name": "Essays",
     "description": "Explore a collection of essays written by inmates."
   },
   "poetry": {
-    "img": "poetry.png",
+    "img": "/explore-images/poetry.png",
     "name": "Poetry",
     "description": "Read poetry written by our community members."
   },
   "art": {
-    "img": "arts.png",
+    "img": "/explore-images/arts.png",
     "name": "Arts",
     "description": "Discover artworks created by our participants."
   }
