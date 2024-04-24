@@ -56,7 +56,7 @@
           <p class = "caption"> {{ pdfNames[index]}} </p>
         </b-carousel-slide>
         </b-carousel>
-
+        <b-modal v-model="showPdfViewer" title="PDF Viewer" @hidden="closePdfViewer"> <VuePdfEmbed :source="selectedPdf" /> </b-modal>
       </div>
   </div>
 </template>
