@@ -133,6 +133,23 @@ body {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
+.newsletters {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2%;
+}
+
+.read {
+  margin-left: 33%;
+  font-weight: bold;
+  font-size: 35px;
+  margin-top: 5%;
+}
+
+.caption{
+  font-size: 35px;
+}
+
 @media (max-width: 600px) {
   .tiles {
     padding: 0 20px;
