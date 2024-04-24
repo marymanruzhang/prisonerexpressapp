@@ -1,34 +1,34 @@
 <template>
   <div class="global-content-padding">
-    <b-sidebar>
-      <b-container fluid>
-        <b-row class="header">
-          <b-col cols="2" class="sidebar-toggle">
-            <img src="/public/images/menu.png" alt="Sidebar Toggle" @click="toggleSidebar">
-          </b-col>
-          <b-col cols="8" class="text-center">
-            <img src="/public/images/PrionerExpressBGR.png" alt="Logo" class="logo">
-          </b-col>
-          <b-col cols="2" class="text-right settings-toggle">
-            <img src="/public/images/settings.png" alt="Settings" @click="openSettings">
-          </b-col>
-        </b-row>
+      <b-sidebar>
+          <b-container fluid>
+              <b-row class="header">
+                  <b-col cols="2" class="sidebar-toggle">
+                      <img src="/public/images/menu.png" alt="Sidebar Toggle" @click="toggleSidebar">
+                  </b-col>
+                  <b-col cols="8" class="text-center">
+                      <img src="/public/images/PrionerExpressBGR.png" alt="Logo" class="logo">
+                  </b-col>
+                  <b-col cols="2" class="text-right settings-toggle">
+                      <img src="/public/images/settings.png" alt="Settings" @click="openSettings">
+                  </b-col>
+              </b-row>
 
-        <div v-if="isSidebarOpen" class="sidebar">
-          <p>Sidebar Content</p>
-          <b-button @click="toggleSidebar">Close Sidebar</b-button>
-        </div>
-        <div v-if="isSettingsOpen" class="settings-modal">
-          <div class="settings-modal">
-            <p>You can change the page to dark mode!!!</p>
-            <b-button @click="toggleAppDarkMode" class="mb-3">
-              {{ darkMode ? 'Disable Dark Mode' : 'Enable Dark Mode' }}
-            </b-button>
-            <b-button @click="closeSettings" class="mb-3">Close Settings</b-button>
-          </div>
-        </div>
-      </b-container>
-    </b-sidebar>
+              <div v-if="isSidebarOpen" class="sidebar">
+                  <p class="prompt-title">Today's Journal Prompt:</p>
+                  <p class="prompt">{{ currentPrompt }}</p>
+                  <b-button @click="generatePrompt" class="mb-3 prompt-button">New Prompt</b-button>
+                  <b-button @click="toggleSidebar" class="close-button">Close Sidebar</b-button>
+              </div>
+              <div v-if="isSettingsOpen" class="settings-modal">
+                  <p>You can change the page to dark mode!!!</p>
+                  <b-button @click="toggleAppDarkMode" class="mb-3 toggle-button">
+                      {{ darkMode ? 'Disable Dark Mode' : 'Enable Dark Mode' }}
+                  </b-button>
+                  <b-button @click="closeSettings" class="close-button">Close Settings</b-button>
+              </div>
+          </b-container>
+      </b-sidebar>
   </div>
 </template>
 
@@ -36,42 +36,58 @@
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const isSidebarOpen = ref(false);
-    const isSettingsOpen = ref(false);
-    const darkMode = ref(false);
+setup() {
+const isSidebarOpen = ref(false);
+const isSettingsOpen = ref(false);
+const darkMode = ref(false);
+const currentPrompt = ref("Click on 'New Prompt' to get started!");
 
-    function toggleSidebar() {
-      isSidebarOpen.value = !isSidebarOpen.value;
-      console.log("Sidebar toggled", isSidebarOpen.value);
-    }
+const prompts = [
+"What is something you learned this week?",
+"Describe a moment today when you felt content.",
+"Write about a person who has influenced your life.",
+"What are three things you're grateful for today?",
+"How do you feel about the current chapter of your life?",
+"What is your most treasured memory?"
+];
 
-    function openSettings() {
-      isSettingsOpen.value = true;
-      console.log("Settings opened");
-    }
+function toggleSidebar() {
+isSidebarOpen.value = !isSidebarOpen.value;
+console.log("Sidebar toggled", isSidebarOpen.value);
+}
 
-    function closeSettings() {
-      isSettingsOpen.value = false;
-      console.log("Settings closed");
-    }
+function openSettings() {
+isSettingsOpen.value = true;
+console.log("Settings opened");
+}
 
-    function toggleAppDarkMode() {
-      darkMode.value = !darkMode.value;
-      localStorage.setItem('darkMode', darkMode.value);
-      document.body.classList.toggle('dark-theme', darkMode.value);
-    }
+function closeSettings() {
+isSettingsOpen.value = false;
+console.log("Settings closed");
+}
 
-    return {
-      isSidebarOpen,
-      isSettingsOpen,
-      darkMode,
-      toggleSidebar,
-      openSettings,
-      closeSettings,
-      toggleAppDarkMode
-    };
-  }
+function toggleAppDarkMode() {
+darkMode.value = !darkMode.value;
+localStorage.setItem('darkMode', darkMode.value);
+document.body.classList.toggle('dark-theme', darkMode.value);
+}
+
+function generatePrompt() {
+currentPrompt.value = prompts[Math.floor(Math.random() * prompts.length)];
+}
+
+return {
+isSidebarOpen,
+isSettingsOpen,
+darkMode,
+toggleSidebar,
+openSettings,
+closeSettings,
+toggleAppDarkMode,
+currentPrompt,
+generatePrompt
+};
+}
 }
 </script>
 
@@ -344,5 +360,44 @@ b-card.highlight{
   right: 0;
   box-shadow: -4px 0 15px rgba(0,0,0,0.1);
   z-index: 1052;
+}
+
+.prompt-title {
+font-size: 1.2em;
+font-weight: bold;
+margin-bottom: 10px;
+color: #333;
+}
+
+.prompt {
+font-size: 1em;
+margin-bottom: 20px;
+color: #555;
+}
+
+.prompt-button, .toggle-button, .close-button {
+  display: block;
+  width: 90%;
+  margin: 10px auto;
+  padding: 12px;
+  font-size: 1em;
+  color: white;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.prompt-button:hover, .toggle-button:hover, .close-button:hover {
+  background-color: #0056b3;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.close-button {
+  background-color: #FF6347; /* Tomato color for the close button for a distinctive look */
+}
+
+.close-button:hover {
+  background-color: #e05241;
 }
 </style>
