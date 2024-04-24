@@ -1,5 +1,11 @@
 <script>
+import VuePdfEmbed from 'vue-pdf-embed';
+import 'vue-pdf-embed/dist/style/index.css';
+
 export default {
+  components: {
+    VuePdfEmbed
+  },
   data() {
     return {
       selectedFixture: null
@@ -33,38 +39,19 @@ export default {
    <p align = "center" class = "uppercase"> {{this.work_type}} Collection</p>
   </b-row>
 
-  <b-row v-if="selectedFixture" class="overlay">
-    <b-card class="centered-card stylish-card w-100 h-75" >
-      <div class="card-body">
-        <b-row>
-          <b-col cols = "11" class="d-flex  justify-content-center ">
-            <img  v-if="this.work_type === 'art'" class="w-100 h-75" :src="`${baseDir}images/${selectedFixture['img']}`">
-            <p v-else>
-              TODO
-              This means its not art: show pdf instead
-            </p>
-          </b-col>
-          <b-col cols = "1">
-            <button type="button" class="btn-close" aria-label="Close" @click="clearSelection"></button>
-          </b-col>
-        </b-row>
-        <!-- <b-row>
-          <h3 align = "center" v-if="selectedFixture['title']" class="card-title mt-2">{{ selectedFixture["title"] }}</h3>
-            <h6 align = "center" v-if="selectedFixture['author']" class="card-text">by: {{ selectedFixture["author"] }}</h6>
-            <h6 align = "center" class="card-text" v-if="selectedFixture['date']">Published: {{ selectedFixture["date"] }}</h6>
-            <h6 align = "center" class="card-text" v-if="selectedFixture['newsletter']">Featured in {{ selectedFixture["newsletter"] }}</h6>
-        </b-row> -->
-      </div>
-    </b-card>
-  </b-row>
+
+    <!-- <b-modal id="my-modal" hide-footer class="pdf-container">
+      <p> {{selectedFixture['title']  }}</p>
+
+    </b-modal> -->
+
 
   <b-row>
-    <b-card
+    <b-card v-b-modal.my-modal
       class="work_card stylish-card"
       v-for="(fixture, key) in fixturesList"
       :key="key"
       @click="selectFixture(fixture)"
-      :class="{ dim: selectedFixture }"
     >
       <div class="card-body">
         <b-row>
@@ -79,6 +66,22 @@ export default {
           </b-col>
         </b-row>
       </div>
+  <b-modal v-if="selectedFixture && work_type ==='art'"
+    id="my-modal"
+    hide-footer >
+      <div class="card-body">
+        <img class="w-100 h-75" :src="`${baseDir}images/${selectedFixture['img']}`">
+      </div>
+    </b-modal>
+
+    <b-modal v-if="selectedFixture && work_type !='art'"
+    id="my-modal"
+    hide-footer >
+    <VuePdfEmbed annotation-layer text-layer :source="selectedFixture['pdf']"/>
+    </b-modal>
+
+
+
     </b-card>
   </b-row>
 </b-container>
@@ -112,6 +115,7 @@ export default {
   left: 0;
   width: 100%;
   height: 100%;
+  overflow-y: auto;
   background-color: rgba(0, 0, 0, 0.7);
   display: flex;
   justify-content: center;
@@ -119,6 +123,13 @@ export default {
   z-index: 10;
 }
 
+.pdf-container{
+
+  width: 100%; /* Adjust width as necessary */
+  height: 90vh; /* Adjust height to provide sufficient space for the PDF */
+  overflow-y: auto; /* Allows scrolling within the PDF container if needed */
+
+}
 
 /* General styling for all b-cards */
 .stylish-card {

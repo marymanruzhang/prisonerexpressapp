@@ -4,20 +4,24 @@
         "img": null,
         "author": "Stephen LaValle",
         "date": "September 12, 2017",
-        "newsletter": "Essays, Telling Your Story"
+        "newsletter": "Essays, Telling Your Story",
+        "pdf": "/pdfs/winter24.pdf"
+
     },
     "childhood": {
         "title": "Childhood",
         "img": null,
         "author": "Anthony Mendoza",
         "date": "September 5, 2017",
-        "newsletter": "Essays, Telling Your Story"
+        "newsletter": "Essays, Telling Your Story",
+        "pdf": "/pdfs/winter23.pdf"
     },
     "art3": {
         "title": "My Earliest Memory",
         "img": null,
         "author": "Barry L. Taylor",
         "date": "August 29, 2017",
-        "newsletter": "Essays, Telling Your Story"
+        "newsletter": "Essays, Telling Your Story",
+        "pdf": "/pdfs/winter22.pdf"
     }
 }
