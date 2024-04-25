@@ -394,11 +394,28 @@ color: #555;
 }
 
 .close-button {
-  margin-top: 70vh;
+  margin-top: 65vh;
   background-color: #FF6347;
 }
 
 .close-button:hover {
   background-color: #e05241;
 }
+
+.sidebar {
+  right: 0;
+  top: 0;
+  width: 300px;
+  height: 100%;
+  background: #FFFFFF;
+  box-shadow: -4px 0 15px rgba(0,0,0,0.1);
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+  position: fixed;
+  z-index: 1001;
+}
+
+
 </style>
