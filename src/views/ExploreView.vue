@@ -128,11 +128,10 @@ body {
   animation: fadeIn 3s ease-out;
 }
 
-.h_text{
+.h_text {
   font-size: 50px;
   font-weight: bold;
 }
-
 
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
@@ -178,7 +177,7 @@ body {
   overflow: hidden;
   padding: 0;
   transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 40px 40px 40px rgba(0, 0, 0, 0.25);
+  box-shadow: 30px 30px 30px rgba(0, 0.25, 0.25, 0.25);
   border: none;
   cursor: pointer;
 }
@@ -266,4 +265,13 @@ body {
   max-width: 80%;
   margin: 20px auto;
 }
+.tile-header img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 10 / 10;
+  object-position: center;
+  margin-bottom: -32px;
+}
+
 </style>
