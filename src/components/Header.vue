@@ -1,4 +1,4 @@
-ok make sure the links are still clickable by inclusidn ghe jacascipt in here but keeping orignal css <template>
+<template>
   <div class="global-content-padding">
       <b-sidebar>
           <b-container fluid>
@@ -91,7 +91,7 @@ generatePrompt
 }
 </script>
 
-<style scoped>
+<style>
 @import url('https://fonts.googleapis.com/css2?family=Jacquard+12+Charted&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
 
 body {
@@ -401,5 +401,4 @@ color: #555;
 .close-button:hover {
   background-color: #e05241;
 }
-
 </style>
