@@ -76,7 +76,7 @@ export default {
 .save {
   color: red;
   cursor: pointer;
-  width: 20px; /* Adjust the width as needed */
+  width: 20px;
   transition: filter 0.3s;
 }
 
@@ -86,10 +86,10 @@ export default {
 
 .program {
   position: relative;
-  max-width: 350px; /* Adjust max-width for responsiveness */
-  padding: 4vw; /* Adjust padding for responsiveness */
+  max-width: 350px;
+  padding: 4vw;
   text-align: center;
-  margin-bottom: 4vw; /* Adjust margin for responsiveness */
+  margin-bottom: 4vw;
 }
 
 .program:hover {
@@ -97,16 +97,16 @@ export default {
 }
 
 .name {
-  font-size: 1.8vw; /* Adjust font size for responsiveness */
+  font-size: 1.8vw;
 }
 
 .description {
-  font-size: 1.2vw; /* Adjust font size for responsiveness */
+  font-size: 1.2vw;
 }
 
 .save-message {
   color: green;
-  font-size: 1.4vw; /* Adjust font size for responsiveness */
+  font-size: 1.4vw;
 }
 
 .fade-enter-active, .fade-leave-active {
@@ -118,54 +118,54 @@ export default {
 }
 
 .global-content-padding {
-  padding-bottom: 10vw; /* Adjust padding for responsiveness */
+  padding-bottom: 10vw;
 }
 
 @media (max-width: 768px) {
   .program {
-    max-width: 300px; /* Adjust max-width for smaller screens */
-    padding: 5vw; /* Adjust padding for smaller screens */
-    margin-bottom: 5vw; /* Adjust margin for smaller screens */
+    max-width: 300px;
+    padding: 5vw;
+    margin-bottom: 5vw;
   }
 
   .name {
-    font-size: 2vw; /* Adjust font size for smaller screens */
+    font-size: 2vw;
   }
 
   .description {
-    font-size: 1.4vw; /* Adjust font size for smaller screens */
+    font-size: 1.4vw;
   }
 
   .save-message {
-    font-size: 1.6vw; /* Adjust font size for smaller screens */
+    font-size: 1.6vw;
   }
 
   .global-content-padding {
-    padding-bottom: 15vw; /* Adjust padding for smaller screens */
+    padding-bottom: 15vw;
   }
 }
 
 @media (max-width: 576px) {
   .program {
-    max-width: 250px; /* Adjust max-width for even smaller screens */
-    padding: 6vw; /* Adjust padding for even smaller screens */
-    margin-bottom: 6vw; /* Adjust margin for even smaller screens */
+    max-width: 250px;
+    padding: 6vw;
+    margin-bottom: 6vw; 
   }
 
   .name {
-    font-size: 2.2vw; /* Adjust font size for even smaller screens */
+    font-size: 2.2vw;
   }
 
   .description {
-    font-size: 1.5vw; /* Adjust font size for even smaller screens */
+    font-size: 1.5vw;
   }
 
   .save-message {
-    font-size: 1.8vw; /* Adjust font size for even smaller screens */
+    font-size: 1.8vw;
   }
 
   .global-content-padding {
-    padding-bottom: 20vw; /* Adjust padding for even smaller screens */
+    padding-bottom: 20vw;
   }
 }
 
