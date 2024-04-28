@@ -1,0 +1,1 @@
+if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/design-dinos-project/sw.js', { scope: '/design-dinos-project/' })})}
