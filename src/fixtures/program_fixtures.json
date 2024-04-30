@@ -48,7 +48,7 @@
     "meditation": {
         "name": "Meditation",
         "img": "meditation.png",
-        "description": "This packet contains information about various practices in meditation, its benefits, advice, a list of resources, and more. Begin or continue your journey to soothe and sharpen your mind in new ways.",
+        "description": "This packet contains information about various practices in meditation, its benefits, advice, a list of resources, and more. Begin sharpening your mind in new ways.",
         "pdf-source": "https://prisonerexpress.org/wp-content/uploads/2024/02/23-Fall-meditation-packet-Final.pdf",
         "pdf": "pdfs/program-pdfs/meditation.pdf"
     },
@@ -76,14 +76,14 @@
     "computer-sci": {
         "name": "Computer Science",
         "img": "computerscience.png",
-        "description": "CS is so much more than computers, cubicles, and the huge blocks of code we see in movies – it means creating fashion technology, technologies to help disabled people and underserved communities, technologies to connect people around the globe like health professionals or to build communities that wouldn’t have existed previously, and more. CS means having the power to create something.",
+        "description": "CS is so much more than computers. CS means having the power to create something. Click to learn more about CS fundamentals",
         "pdf-source": "https://prisonerexpress.org/wp-content/uploads/2021/01/20-Fall-Computer-Science-Concepts.pdf",
         "pdf": "pdfs/program-pdfs/cs.pdf"
     },
     "cooking": {
         "name": "Cooking",
         "img": "cooking.png",
-        "description": "This cookbook was so much fun to put together! Cooking is one of my favorite hobbies and I loved getting to read all the inventive recipes submitted. Cooking in prison poses so many challenges and the individuals who submit recipes have come up with incredibly creative ways to put together amazing dishes despite the difficulties.",
+        "description": "Cooking in prison poses so many challenges and the individuals who submit recipes have come up with incredibly creative ways to put together amazing dishes despite the difficulties.",
         "pdf-source": "https://prisonerexpress.org/wp-content/uploads/2018/10/2018-06-PE-Cookbook-Meals-Sides-and-Sauces.pdf",
         "pdf": "pdfs/program-pdfs/cooking.pdf"
     },
