@@ -4,7 +4,10 @@
       <b-container>
         <b-row class="justify-content-center">
           <b-col cols="12" md="8" v-for="(item, index) in program_fixtures" :key="index">
-            <b-card class="program d-flex flex-row shadow-lg">
+            <b-card
+            v-b-modal.my-modal
+            @click="selectFixture(item)"
+            class="program d-flex flex-row shadow-lg">
               <b-card-img class="program-image" :src="`${baseDir}images/${item.img}`" alt="Program Image"></b-card-img>
               <div class="program-info d-flex flex-column justify-content-between">
                 <b-card-text class="program-description">{{ item.description }}</b-card-text>
@@ -19,6 +22,12 @@
                   </transition>
                 </div>
               </div>
+
+              <b-modal v-if="selectedFixture" id="my-modal" hide-footer >
+                {{selectedFixture['name']}}
+                <VuePdfEmbed annotation-layer text-layer :source="`${baseDir}${selectedFixture['pdf']}`"/>
+              </b-modal>
+
             </b-card>
           </b-col>
         </b-row>
@@ -28,12 +37,19 @@
 </template>
 
 <script>
+import VuePdfEmbed from 'vue-pdf-embed';
+import 'vue-pdf-embed/dist/style/index.css';
+
 export default {
+  components: {
+    VuePdfEmbed
+  },
   data() {
     return {
       savedPrograms: [],
       showSaveMessage: false,
       currentSaving: '',
+      selectedFixture: null
     };
   },
   methods: {
@@ -55,6 +71,12 @@ export default {
     isSaved(programName) {
       return this.savedPrograms.some(p => p.name === programName);
     },
+    selectFixture(fixture) {
+      this.selectedFixture = fixture;
+    },
+    clearSelection() {
+      this.selectedFixture = null;
+    }
   },
   mounted() {
     const saved = localStorage.getItem('savedPrograms');
