@@ -32,7 +32,7 @@
     },
     "app-design": {
         "name": "App Design",
-        "img": "app-design.png",
+        "img": "appdesign.png",
         "description": "No prior design experience required! This packet focuses on the creative design process of app creation. We will cover the life cycle of the human-centered design process, from user research (learning about your audience) to design (exploring design solutions) and prototyping (creating interactive prototypes of your design)."
     },
     "chess": {
@@ -62,7 +62,7 @@
     },
     "computer-sci": {
         "name": "Computer Science Concepts",
-        "img": "cs.png",
+        "img": "computerscience.png",
         "description": "CS is so much more than computers, cubicles, and the huge blocks of code we see in movies – it means creating fashion technology, technologies to help disabled people and underserved communities, technologies to connect people around the globe like health professionals or to build communities that wouldn’t have existed previously, and more. CS means having the power to create something."
     },
     "cooking": {
