@@ -2,7 +2,7 @@
     <div class="container-fluid nav-container">
         <b-row class="nav">
             <b-nav pills justified fill class="w-100 navbar navbar-expand-lg sticky-top">
-                <b-nav-item href="/">
+                <b-nav-item to ="/">
                     <b-row>
                         <span :class="['material-symbols-outlined', 'nav-icon', {'active': isActive('/')}]">home</span>
                     </b-row>
@@ -10,7 +10,7 @@
                         <div :class="['nav-text', {'active': isActive('/')}]">Home</div>
                     </b-row>
                 </b-nav-item>
-                <b-nav-item href="/programs">
+                <b-nav-item to ="/programs">
                     <b-row>
                         <span :class="['material-symbols-outlined', 'nav-icon', {'active': isActive('/programs')}]">school</span>
                     </b-row>
@@ -18,7 +18,7 @@
                         <div :class="['nav-text', {'active': isActive('/programs')}]">Programs</div>
                     </b-row>
                 </b-nav-item>
-                <b-nav-item href="/FAQ">
+                <b-nav-item to ="/FAQ">
                     <b-row>
                         <span :class="['material-symbols-outlined', 'nav-icon', {'active': isActive('/FAQ')}]">help</span>
                     </b-row>
@@ -26,7 +26,7 @@
                         <div :class="['nav-text', {'active': isActive('/FAQ')}]">FAQ</div>
                     </b-row>
                 </b-nav-item>
-                <b-nav-item href="/saved">
+                <b-nav-item to ="/saved">
                     <b-row>
                         <span :class="['material-symbols-outlined', 'nav-icon', {'active': isActive('/saved')}]">bookmark</span>
                     </b-row>
