@@ -66,6 +66,12 @@ export default {
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Jacquard+12+Charted&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+  font-family: "Noto Serif", serif;
+  background-color: #F0F8FF;
+}
 .global-content-padding {
   padding-bottom: 12vw;
   padding-top: 3vw;
@@ -187,5 +193,31 @@ export default {
   .program-title-container {
     padding-left: 0;
   }
+}
+
+.dark-theme {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.dark-theme .header, .dark-theme .settings-modal, .dark-theme .sidebar {
+  background-color: #333;
+  color: #ffffff;
+}
+
+.dark-theme .tile, .dark-theme .highlight {
+  background-color: #424242;
+  color: #ffffff;
+  border-color: #616161;
+}
+
+.dark-theme .tile:hover, .dark-theme .highlight:hover {
+  background-color: #535353;
+  color: #ffffff;
+  box-shadow: 0 12px 24px rgba(255, 255, 255, 0.12);
+}
+
+.dark-theme img {
+  filter: brightness(0.8);
 }
 </style>
