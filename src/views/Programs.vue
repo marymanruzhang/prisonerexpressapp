@@ -9,8 +9,6 @@
             v-b-modal.my-modal
             @click="selectFixture(item)"
             class="program d-flex flex-row shadow-lg">
-
-            class="program d-flex flex-row shadow-lg">
               <div class="program-title-container">
                 <b-card-title class="program-title">{{ item.name }}</b-card-title>
                 <div class="save-container">
