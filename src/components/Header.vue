@@ -48,7 +48,9 @@ const prompts = [
 "Write about a person who has influenced your life.",
 "What are three things you're grateful for today?",
 "How do you feel about the current chapter of your life?",
-"What is your most treasured memory?"
+"What is your most treasured memory?",
+"What is something you're looking forward to?",
+"What inspires you?"
 ];
 
 function toggleSidebar() {
