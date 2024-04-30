@@ -6,7 +6,7 @@
         "date": "February 29, 2024",
         "newsletter": null,
         "pdf_url": "https://prisonerexpress.org/wp-content/uploads/2024/02/PP28-final.pdf",
-        "pdf": "/pdfs/poem-pdfs/PP28-final.pdf"
+        "pdf": "pdfs/poem-pdfs/PP28-final.pdf"
     },
     "poem27": {
         "title": "Poetry Anthology #27",
@@ -15,7 +15,7 @@
         "date": "April 3, 2023",
         "newsletter": null,
         "pdf_url": "https://prisonerexpress.org/wp-content/uploads/2023/04/PP-27-to-print.pdf",
-        "pdf": "/pdfs/poem-pdfs/PP27-final.pdf"
+        "pdf": "pdfs/poem-pdfs/PP27-final.pdf"
     },
     "poem26": {
         "title": "Poetry Anthology #26",
@@ -24,7 +24,7 @@
         "date": "November 15, 2022",
         "newsletter": null,
         "pdf-url": "https://prisonerexpress.org/wp-content/uploads/2022/11/PP26-Final-1.pdf",
-        "pdf": "/pdfs/poem-pdfs/PP26-final.pdf"
+        "pdf": "pdfs/poem-pdfs/PP26-final.pdf"
     },
     "poem25": {
         "title": "Poetry Anthology #25: Melancholy, Love, and Lessons by Kimberly V",
@@ -33,7 +33,7 @@
         "date": "March 18, 2022",
         "newsletter": null,
         "pdf-url": "https://prisonerexpress.org/wp-content/uploads/2022/03/Anthology-25-Gary-comments.pdf",
-        "pdf": "/pdfs/poem-pdfs/PP25-final.pdf"
+        "pdf": "pdfs/poem-pdfs/PP25-final.pdf"
     },
     "poem24": {
         "title": "Poetry Anthology #24",
@@ -42,7 +42,7 @@
         "date": "April 3, 2021",
         "newsletter": null,
         "pdf-url": "https://acrobat.adobe.com/link/review?uri=urn%3Aaaid%3Ascds%3AUS%3Ae8872e13-9448-4d2c-90b5-525a730c9710#pageNum=1",
-        "pdf": "/pdfs/poem-pdfs/PP24-final.pdf"
+        "pdf": "pdfs/poem-pdfs/PP24-final.pdf"
     },
     "poem23": {
         "title": "Poetry Anthology #23",
@@ -51,7 +51,7 @@
         "date": "October 15, 2020",
         "newsletter": null,
         "pdf-url": "https://prisonerexpress.org/wp-content/uploads/2020/10/Poetry-Anthology-V-23.pdf",
-        "pdf": "/pdfs/poem-pdfs/PP23-final.pdf"
+        "pdf": "pdfs/poem-pdfs/PP23-final.pdf"
     },
     "poem22": {
         "title": "Poetry Anthology #22",
@@ -60,7 +60,7 @@
         "date": "February 5, 2020",
         "newsletter": null,
         "pdf-url": "https://prisonerexpress.org/wp-content/uploads/2020/02/Poetry-Anthology-22-.pdf",
-        "pdf": "/pdfs/poem-pdfs/PP22-final.pdf"
+        "pdf": "pdfs/poem-pdfs/PP22-final.pdf"
     },
     "poem21": {
         "title": "Poetry Anthology #21",
@@ -69,6 +69,6 @@
         "date": "August 6, 2019",
         "newsletter": null,
         "pdf-url": "https://prisonerexpress.org/wp-content/uploads/2019/08/Poetry-Anthology-21to-print-1-7cc92c7ae3245ad9b7c1bbf78b4c9d25.pdf",
-        "pdf": "/pdfs/poem-pdfs/PP21-final.pdf"
+        "pdf": "pdfs/poem-pdfs/PP21-final.pdf"
     }
 }

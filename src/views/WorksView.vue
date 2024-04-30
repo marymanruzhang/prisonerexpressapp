@@ -71,7 +71,7 @@ export default {
       id="my-modal"
       hide-footer >
       <p v-if="selectedFixture['mailing_address']" align="center"> Mailing Address: {{selectedFixture['mailing_address']}}</p>
-      <VuePdfEmbed  v-if="selectedFixture['pdf']" annotation-layer text-layer :source="selectedFixture['pdf']"/>
+      <VuePdfEmbed  :v-if="`${baseDir}${selectedFixture['pdf']}`" annotation-layer text-layer :source="`${baseDir}${selectedFixture['pdf']}`"/>
       <p  align="center">{{ selectedFixture['title'] }}</p>
       <p>{{ selectedFixture['essay'] }}</p>
       </b-modal>
@@ -156,7 +156,7 @@ export default {
 
 .stylish-card .card-text {
   color: #666;
-  margin-top: 10px; 
+  margin-top: 10px;
 }
 
 
