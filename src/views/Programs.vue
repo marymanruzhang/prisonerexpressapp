@@ -12,7 +12,7 @@
               <div class="program-title-container">
                 <b-card-title class="program-title">{{ item.name }}</b-card-title>
                 <div class="save-container">
-                  <img class="save" @click="toggleSave(item)"
+                  <img class="save" @click.stop="toggleSave(item)"
                        :src="isSaved(item.name) ? '/images/saved-images/saved2_active.png' : '/images/saved-images/saved2.png'"
                        alt="Save" />
                   <div v-if="isSaved(item.name)" class="save-message">Saved</div>
