@@ -4,23 +4,26 @@
       <b-container>
         <b-row class="justify-content-center">
           <b-col cols="12" md="8" v-for="(item, index) in program_fixtures" :key="index">
+
             <b-card
             v-b-modal.my-modal
             @click="selectFixture(item)"
             class="program d-flex flex-row shadow-lg">
+
+            class="program d-flex flex-row shadow-lg">
+              <div class="program-title-container">
+                <b-card-title class="program-title">{{ item.name }}</b-card-title>
+                <div class="save-container">
+                  <img class="save" @click="toggleSave(item)"
+                       :src="isSaved(item.name) ? '/images/saved-images/saved2_active.png' : '/images/saved-images/saved2.png'"
+                       alt="Save" />
+                  <div v-if="isSaved(item.name)" class="save-message">Saved</div>
+                </div>
+              </div>
+
               <b-card-img class="program-image" :src="`${baseDir}images/${item.img}`" alt="Program Image"></b-card-img>
               <div class="program-info d-flex flex-column justify-content-between">
                 <b-card-text class="program-description">{{ item.description }}</b-card-text>
-                <div class="program-title-container">
-                  <b-card-title class="program-title">{{ item.name }}</b-card-title>
-                  <img class="save" @click="toggleSave(item)"
-                    :src="isSaved(item.name) ? '/images/saved-images/saved2_active.png' : '/images/saved-images/saved2.png'" alt="Save" />
-                  <transition name="fade">
-                    <p class="save-message" v-if="showSaveMessage && currentSaving === item.name">
-                      Saved!
-                    </p>
-                  </transition>
-                </div>
               </div>
 
               <b-modal v-if="selectedFixture" id="my-modal" hide-footer >
@@ -35,6 +38,7 @@
     </div>
   </div>
 </template>
+
 
 <script>
 import VuePdfEmbed from 'vue-pdf-embed';
@@ -87,15 +91,26 @@ export default {
 }
 </script>
 
-
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Jacquard+12+Charted&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+  font-family: "Noto Serif", serif;
+  background-color: #F0F8FF;
+}
+.global-content-padding {
+  padding-bottom: 12vw;
+  padding-top: 3vw;
+}
+
 .programs-container {
   background-color: #F0F8FF;
 }
 
 .program {
   display: flex;
-  align-items: center;
+  flex-direction: row;
+  align-items: start;
   margin-bottom: 20px;
   background-color: #fff;
   border-radius: 10px;
@@ -103,22 +118,23 @@ export default {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.program-image {
-  width: 150px;
-  height: 150px;
-  margin-right: 20px;
-  border-radius: 10px;
-}
-
-.program-info {
-  flex-grow: 1;
-}
-
 .program-title-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 20px;
+  width: 100%;
+}
+
+.program-image {
+  width: 200px;
+  height: 200px;
+  margin-left: 20px;
+  border-radius: 10px;
+  padding-top: 20px;
+}
+
+.program-info {
+  flex-grow: 1;
 }
 
 .program-title {
@@ -134,22 +150,45 @@ export default {
   padding-top: 5vh;
 }
 
+.save-container {
+  position: relative;
+}
+
+
+.save-message {
+  color: green;
+  font-size: 0.8rem;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
 .save {
   color: red;
   cursor: pointer;
-  width: 20px;
-  transition: filter 0.3s;
+  width: 40px;
+  transition: filter 0.3s, box-shadow 0.3s;
 }
 
 .save:hover {
   filter: brightness(120%);
 }
 
-.save-message {
-  color: green;
-  font-size: 1rem;
+.save-container {
+  position: relative;
 }
 
+.save-message {
+  color: green;
+  font-size: 0.8rem;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
 .fade-enter-active, .fade-leave-active {
   transition: opacity 0.5s;
 }
@@ -158,30 +197,53 @@ export default {
   opacity: 0;
 }
 
-.global-content-padding {
-  padding-bottom: 7vw;
-  padding-top: 3vw;
-}
-
 @media (max-width: 768px) {
   .program {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    justify-content: start;
+    width: auto;
+    max-width: none;
   }
-
   .program-image {
-    width: 100%;
-    height: auto;
-    margin-bottom: 10px;
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
   }
 
   .program-info {
-    width: 100%;
+    flex-grow: 1;
+    padding-left: 10px;
   }
 
   .program-title-container {
-    flex-direction: column;
-    align-items: center;
+    padding-left: 0;
   }
+}
+
+.dark-theme {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.dark-theme .header, .dark-theme .settings-modal, .dark-theme .sidebar {
+  background-color: #333;
+  color: #ffffff;
+}
+
+.dark-theme .tile, .dark-theme .highlight {
+  background-color: #424242;
+  color: #ffffff;
+  border-color: #616161;
+}
+
+.dark-theme .tile:hover, .dark-theme .highlight:hover {
+  background-color: #535353;
+  color: #ffffff;
+  box-shadow: 0 12px 24px rgba(255, 255, 255, 0.12);
+}
+
+.dark-theme img {
+  filter: brightness(0.8);
 }
 </style>

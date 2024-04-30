@@ -41,66 +41,65 @@
     "app-design": {
         "name": "App Design",
         "img": "appdesign.png",
-        "description": "No prior design experience required! This packet focuses on the creative design process of app creation. We will cover the life cycle of the human-centered design process, from user research (learning about your audience) to design (exploring design solutions) and prototyping (creating interactive prototypes of your design).",
+        "description": "No prior design experience required! This packet focuses on the creative design process of app creation.",
         "pdf-source": "https://prisonerexpress.org/wp-content/uploads/2024/02/APP-Design-Packet-FINAL.pdf",
         "pdf": "pdfs/program-pdfs/app.pdf"
     },
     "chess": {
         "name": "Chess",
         "img": "chess.png",
-        "description": "New to chess or a seasoned expert? No matter what background you have, this chess packet will satisfy your interest in the sport. In this packet, you will review the basics and special moves, read about historic tournaments and players, and practice with some chess challenges.",
+        "description": "New to chess or a seasoned expert? No matter what background you have, this chess packet will satisfy your interest in the sport.",
         "pdf-source": "https://prisonerexpress.org/wp-content/uploads/2024/02/Chess-Newsletter-Fall-2023-Final.pdf",
         "pdf": "pdfs/program-pdfs/chess.pdf"
     },
     "meditation": {
-        "name": "Meditation and Spirituality",
+        "name": "Meditation",
         "img": "meditation.png",
-        "description": "This packet contains information about various practices in meditation, its benefits, advice, a list of resources, and more. Begin or continue your journey to soothe and sharpen your mind in new ways.",
+        "description": "This packet contains information about various practices in meditation, its benefits, advice, a list of resources, and more. Begin sharpening your mind in new ways.",
         "pdf-source": "https://prisonerexpress.org/wp-content/uploads/2024/02/23-Fall-meditation-packet-Final.pdf",
         "pdf": "pdfs/program-pdfs/meditation.pdf"
     },
     "philosophy": {
         "name": "Philosophy",
         "img": "philosophy.png",
-        "description": "Trying to make sense of this world, and especially trying to understand spiritual and emotional well-being while faced with all the challenges of life has left man scratching his head and pondering. This program leads you through a historical tour of the development of some of this philosophical thought. It also contains exercises and questions to help you process the nuanced materials. For those curious about philosophy, this packet provides a great start.",
+        "description": "Trying to make sense of this world? This program leads you through a historical tour of the development of some of this philosophical thought.",
         "pdf-source": "https://prisonerexpress.org/wp-content/uploads/2022/07/22SP-Philosophy-Curriculum.pdf",
         "pdf": "pdfs/program-pdfs/philosophy.pdf"
     },
     "spanish": {
-        "name": "Lets Learn Spanish!",
+        "name": "Spanish!",
         "img": "spanish.png",
-        "description": "There was so much interest from many of you in learning Spanish that we have brought back this program. We now have an advanced Spanish packet as well, and will offer that in our next cycle. If you, too, would like to pick up an essential second language, regardless of your background, begin this program!",
-        "pdf-source": "https://prisonerexpress.org/wp-content/uploads/2022/07/22SP-Lets-Learn-Spanish.pdf",
-        "pdf": "pdfs/program-pdfs/spanish.pdf"
+        "description": "There was so much interest from many of you in learning Spanish that we have brought back this program. We now have an advanced Spanish packet as well!",
+        "pdf-source": "https://prisonerexpress.org/wp-content/uploads/2022/07/22SP-Philosophy-Curriculum.pdf",
+        "pdf": "pdfs/program-pdfs/philosophy.pdf"
     },
     "film": {
         "name": "Film Story",
         "img": "film.png",
-        "description": "Speak to your inner writer. Put the story living in your head to paper. This packet provides a spark to help you in your creative work to bring those ideas to life and excite your writing interests. This curriculum contains concepts and exercises that will help you begin crafting a story for film or television.",
+        "description": "Speak to your inner writer. Put the story living in your head to paper. This packet provides a spark to help you in your creative work to bring those ideas to life.",
         "pdf-source": "https://prisonerexpress.org/2022/07/film-writing-spring-22/",
         "pdf": "pdfs/program-pdfs/film.pdf"
     },
     "computer-sci": {
-        "name": "Computer Science Concepts",
+        "name": "Computer Science",
         "img": "computerscience.png",
-        "description": "CS is so much more than computers, cubicles, and the huge blocks of code we see in movies – it means creating fashion technology, technologies to help disabled people and underserved communities, technologies to connect people around the globe like health professionals or to build communities that wouldn’t have existed previously, and more. CS means having the power to create something.",
+        "description": "CS is so much more than computers. CS means having the power to create something. Click to learn more about CS fundamentals",
         "pdf-source": "https://prisonerexpress.org/wp-content/uploads/2021/01/20-Fall-Computer-Science-Concepts.pdf",
         "pdf": "pdfs/program-pdfs/cs.pdf"
     },
     "cooking": {
-        "name": "Meals, Sides, and Sauces – a Prisoner Express Cookbook",
+        "name": "Cooking",
         "img": "cooking.png",
-        "description": "This cookbook was so much fun to put together! Cooking is one of my favorite hobbies and I loved getting to read all the inventive recipes submitted. Cooking in prison poses so many challenges and the individuals who submit recipes have come up with incredibly creative ways to put together amazing dishes despite the difficulties.",
+        "description": "Cooking in prison poses so many challenges and the individuals who submit recipes have come up with incredibly creative ways to put together amazing dishes despite the difficulties.",
         "pdf-source": "https://prisonerexpress.org/wp-content/uploads/2018/10/2018-06-PE-Cookbook-Meals-Sides-and-Sauces.pdf",
         "pdf": "pdfs/program-pdfs/cooking.pdf"
     },
     "biology": {
-        "name": "Plasmodesmata: Channels to exchange information between cells",
+        "name": "Biology",
         "img": "biology.png",
-        "description": " For those of you that are new, plasmodesmata (singular: plasmodesma) are microscopic tunnels that form between two neighboring plant cells that allow the exchange of information and other materials.  They are very tiny, usually less than 100 nm wide in most plants, which is about a thousand times thinner than a human hair. However, as you can see in the picture below, most plant cells have many of these channels, allowing the exchange of many tiny messages at once.",
-        "pdf-source": "https://prisonerexpress.org/wp-content/uploads/2017/06/17-spring-plasmodesmata-issue-2-.pdf",
-        "pdf": "pdfs/program-pdfs/biology.pdf"
-
+        "description": "For those of you that are new, plasmodesmata are microscopic tunnels that form between two neighboring plant cells that allow the exchange of information and other materials.",
+        "pdf-source": "https://prisonerexpress.org/2022/07/film-writing-spring-22/",
+        "pdf": "pdfs/program-pdfs/film.pdf"
     },
     "trauma": {
         "name": "What is Trauma",
@@ -110,7 +109,7 @@
         "pdf": "pdfs/program-pdfs/trauma.pdf"
     },
     "ocean": {
-        "name": "Exploring the Ocean",
+        "name": "The Ocean",
         "img": "ocean.png",
         "description": "This winter, Prisoner Express staff member Laura Martinez put together this ocean packet.",
         "pdf-source": "https://prisonerexpress.org/wp-content/uploads/2017/02/Exploring-the-Ocean-1.pdf",
@@ -119,9 +118,8 @@
     "songwriting": {
         "name": "Songwriting",
         "img": "songwriting.png",
-        "description": "Prisoners are invited to create original songs and share it through this course created by Kathy Ziegler. She’s a multi-instrumentalist who likes to write songs.We’re sending this program to 400+ prisoners who’ve chosen to participate in this program.",
+        "description": "Prisoners are invited to create original songs and share it through this course created by Kathy Ziegler.",
         "pdf-source": "https://prisonerexpress.org/wp-content/uploads/2016/11/Prisoner-Express-Songwriting-Final.pdf",
         "pdf": "pdfs/program-pdfs/songwriting.pdf"
-
     }
 }
