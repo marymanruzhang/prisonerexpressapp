@@ -29,5 +29,65 @@
         "name": "Newsletter",
         "img": "newspaper.png",
         "description": "Includes participant submissions and guides new members on how to contribute to Prisoner Express."
+    },
+    "app-design": {
+        "name": "App Design",
+        "img": "app-design.png",
+        "description": "No prior design experience required! This packet focuses on the creative design process of app creation. We will cover the life cycle of the human-centered design process, from user research (learning about your audience) to design (exploring design solutions) and prototyping (creating interactive prototypes of your design)."
+    },
+    "chess": {
+        "name": "Chess",
+        "img": "chess.png",
+        "description": "New to chess or a seasoned expert? No matter what background you have, this chess packet will satisfy your interest in the sport. In this packet, you will review the basics and special moves, read about historic tournaments and players, and practice with some chess challenges."
+    },
+    "meditation": {
+        "name": "Meditation and Spirituality",
+        "img": "meditation.png",
+        "description": "This packet contains information about various practices in meditation, its benefits, advice, a list of resources, and more. Begin or continue your journey to soothe and sharpen your mind in new ways."
+    },
+    "philosophy": {
+        "name": "Philosophy",
+        "img": "philosophy.png",
+        "description": "Trying to make sense of this world, and especially trying to understand spiritual and emotional well-being while faced with all the challenges of life has left man scratching his head and pondering. This program leads you through a historical tour of the development of some of this philosophical thought. It also contains exercises and questions to help you process the nuanced materials. For those curious about philosophy, this packet provides a great start."
+    },
+    "spanish": {
+        "name": "Lets Learn Spanish!",
+        "img": "spanish.png",
+        "description": "There was so much interest from many of you in learning Spanish that we have brought back this program. We now have an advanced Spanish packet as well, and will offer that in our next cycle. If you, too, would like to pick up an essential second language, regardless of your background, begin this program!"
+    },
+    "film": {
+        "name": "Film Story",
+        "img": "film.png",
+        "description": "Speak to your inner writer. Put the story living in your head to paper. This packet provides a spark to help you in your creative work to bring those ideas to life and excite your writing interests. This curriculum contains concepts and exercises that will help you begin crafting a story for film or television."
+    },
+    "computer-sci": {
+        "name": "Computer Science Concepts",
+        "img": "cs.png",
+        "description": "CS is so much more than computers, cubicles, and the huge blocks of code we see in movies – it means creating fashion technology, technologies to help disabled people and underserved communities, technologies to connect people around the globe like health professionals or to build communities that wouldn’t have existed previously, and more. CS means having the power to create something."
+    },
+    "cooking": {
+        "name": "Meals, Sides, and Sauces – a Prisoner Express Cookbook",
+        "img": "cooking.png",
+        "description": "This cookbook was so much fun to put together! Cooking is one of my favorite hobbies and I loved getting to read all the inventive recipes submitted. Cooking in prison poses so many challenges and the individuals who submit recipes have come up with incredibly creative ways to put together amazing dishes despite the difficulties."
+    },
+    "biology": {
+        "name": "Plasmodesmata: Channels to exchange information between cells",
+        "img": "biology.png",
+        "description": " For those of you that are new, plasmodesmata (singular: plasmodesma) are microscopic tunnels that form between two neighboring plant cells that allow the exchange of information and other materials.  They are very tiny, usually less than 100 nm wide in most plants, which is about a thousand times thinner than a human hair. However, as you can see in the picture below, most plant cells have many of these channels, allowing the exchange of many tiny messages at once."
+    },
+    "trauma": {
+        "name": "What is Trauma",
+        "img": "trauma.png",
+        "description": "The trauma packet describes different forms of trauma and how to help yourself and others who have experienced it."
+    },
+    "ocean": {
+        "name": "Exploring the Ocean",
+        "img": "ocean.png",
+        "description": "This winter, Prisoner Express staff member Laura Martinez put together this ocean packet."
+    },
+    "songwriting": {
+        "name": "Songwriting",
+        "img": "songwriting.png",
+        "description": "Prisoners are invited to create original songs and share it through this course created by Kathy Ziegler. She’s a multi-instrumentalist who likes to write songs.We’re sending this program to 400+ prisoners who’ve chosen to participate in this program."
     }
 }
