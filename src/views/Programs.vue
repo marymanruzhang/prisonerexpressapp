@@ -4,12 +4,9 @@
       <b-container>
         <b-row class="justify-content-center">
           <b-col cols="12" md="8" v-for="(item, index) in program_fixtures" :key="index">
-
-            <b-card
+           <b-card
             v-b-modal.my-modal
             @click="selectFixture(item)"
-            class="program d-flex flex-row shadow-lg">
-
             class="program d-flex flex-row shadow-lg">
               <div class="program-title-container">
                 <b-card-title class="program-title">{{ item.name }}</b-card-title>
