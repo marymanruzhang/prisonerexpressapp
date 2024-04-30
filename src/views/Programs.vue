@@ -7,6 +7,9 @@
            <b-card
             v-b-modal.my-modal
             @click="selectFixture(item)"
+            @mouseover="hover = true"
+            @mouseleave="hover = false"
+            :class="{'hover-effect': hover}"
             class="program d-flex flex-row shadow-lg">
               <div class="program-title-container">
                 <b-card-title class="program-title">{{ item.name }}</b-card-title>
@@ -27,7 +30,6 @@
                 {{selectedFixture['name']}}
                 <VuePdfEmbed annotation-layer text-layer :source="`${baseDir}${selectedFixture['pdf']}`"/>
               </b-modal>
-
             </b-card>
           </b-col>
         </b-row>
@@ -194,6 +196,11 @@ body {
 .fade-enter, .fade-leave-to {
   opacity: 0;
 }
+
+.program {
+  cursor: pointer;
+}
+
 
 @media (max-width: 768px) {
   .program {
