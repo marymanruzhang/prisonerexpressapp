@@ -4,7 +4,7 @@
       <b-row class="d-flex justify-content-center">
         <b-card v-b-modal.my-modal
         v-for="(item) in fixtures.highlight"
-        img-src="/public/images/highlight-image/highlight.png"
+        :img-src="`${baseDir}images/${item['img']}`"
         img-alt="Card image"
         class="highlight mt-5 w-75"
         img-top
