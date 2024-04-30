@@ -3,22 +3,29 @@
         "name": "Poetry",
         "img": "manuscript.png",
         "description": "Participants given the opportunity to freely express themselves through writing.",
-        "pdf": ""
+        "pdf-source": "https://prisonerexpress.org/wp-content/uploads/2022/07/22SP-Rattle-Poetry.pdf",
+        "pdf": "pdfs/program-pdfs/poetry.pdf"
     },
     "journal": {
         "name": "Journal",
         "img": "journal.png",
-        "description": "Enables every person to share their story and anecdotes from daily life with a broader audience. "
+        "description": "Enables every person to share their story and anecdotes from daily life with a broader audience. ",
+        "pdf-source": "https://prisonerexpress.org/wp-content/uploads/2022/07/2022-SP-Starter-Journal-Packet-.pdf",
+        "pdf": "pdfs/program-pdfs/journal.pdf"
     },
     "essays": {
         "name": "Essays",
         "img": "contract.png",
-        "description": "Writers are given a Word Theme and a Picture Theme to submit writing for each theme."
+        "description": "Writers are given a Word Theme and a Picture Theme to submit writing for each theme.",
+        "pdf-source": "https://prisonerexpress.org/programs/theme-essays/",
+        "pdf": "pdfs/program-pdfs/essay.pdf"
     },
     "art": {
         "name": "Art",
         "img": "art.png",
-        "description": "Offers the opportunity to explore the arts. Work may be showcased in public art exhibitions!"
+        "description": "Offers the opportunity to explore the arts. Work may be showcased in public art exhibitions!",
+        "pdf-source": "https://prisonerexpress.org/wp-content/uploads/2024/04/2023-Fall-ARTKNOWS-to-print.pdf",
+        "pdf": "pdfs/program-pdfs/art.pdf"
     },
     "education": {
         "name": "Education",
