@@ -56,7 +56,7 @@
           <p class = "caption"> {{ pdfNames[index]}} </p>
         </b-carousel-slide>
         </b-carousel>
-        <b-modal v-model="showPdfViewer" title="PDF Viewer" @hidden="closePdfViewer"> <VuePdfEmbed :source="selectedPdf" /> </b-modal>
+        <b-modal v-model="showPdfViewer" title="PDF Viewer" @hidden="closePdfViewer"> <VuePdfEmbed :source="`${baseDir}${selectedPdf}`" /> </b-modal>
       </div>
   </div>
 </template>
@@ -72,11 +72,11 @@ import 'vue-pdf-embed/dist/style/index.css';
 const slide = ref(0);
 
 const pdfSources = [
-  "/pdfs/newsletter-pdfs/winter24.pdf",
-  "/pdfs/newsletter-pdfs/summer23.pdf",
-  "/pdfs/newsletter-pdfs/winter23.pdf",
-  "/pdfs/newsletter-pdfs/summer22.pdf",
-  "/pdfs/newsletter-pdfs/winter22.pdf"
+  "pdfs/newsletter-pdfs/winter24.pdf",
+  "pdfs/newsletter-pdfs/summer23.pdf",
+  "pdfs/newsletter-pdfs/winter23.pdf",
+  "pdfs/newsletter-pdfs/summer22.pdf",
+  "pdfs/newsletter-pdfs/winter22.pdf"
 ];
 const pdfNames = [
   "Winter 2024",
