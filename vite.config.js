@@ -13,10 +13,10 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'masked-icon.svg'],
       manifest: {
-        name: 'Prisoner Express',
-        short_name: 'PExpress',
-        description: 'An app designed for Prisoner Express',
-        theme_color: '#FFFACD',
+        name: 'PWA Example',
+        short_name: 'PWAExample',
+        description: 'An example Vue.js+Vite PWA',
+        theme_color: '#ffffff',
         icons: [
           {
             src: 'pwa-192x192.png',
