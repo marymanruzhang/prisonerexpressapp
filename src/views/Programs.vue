@@ -15,12 +15,11 @@
                 <b-card-title class="program-title">{{ item.name }}</b-card-title>
                 <div class="save-container">
                   <img class="save" @click.stop="toggleSave(item)"
-                  :src="isSaved(item.name) ? `${basedir}/images/saved-images/saved2_active.png` : `${basedir}/images/saved-images/saved2.png`"
+                  :src="isSaved(item.name) ? `${baseDir}images/saved-images/saved2_active.png` : `${baseDir}images/saved-images/saved2.png`"
                        alt="Save" />
                   <div v-if="isSaved(item.name)" class="save-message">Saved</div>
                 </div>
               </div>
-
               <b-card-img class="program-image" :src="`${baseDir}images/${item.img}`" alt="Program Image"></b-card-img>
               <div class="program-info d-flex flex-column justify-content-between">
                 <b-card-text class="program-description">{{ item.description }}</b-card-text>
