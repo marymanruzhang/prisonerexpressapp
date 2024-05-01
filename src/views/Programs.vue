@@ -122,6 +122,7 @@ body {
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  height: 1vh;
 }
 
 .program-image {
@@ -201,7 +202,7 @@ body {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .program {
     flex-direction: row;
     align-items: center;
