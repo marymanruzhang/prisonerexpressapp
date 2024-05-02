@@ -16,7 +16,7 @@ export default defineConfig({
         name: 'Prisoner Express',
         short_name: 'PExpress',
         description: 'An app for Prisoner Express',
-        theme_color: '#add8e6',
+        theme_color: '#011631',
         icons: [
           {
             src: 'pwa-192x192.png',
