@@ -3,35 +3,45 @@
     <div class="saved-programs-container">
       <b-container>
         <b-row v-if="savedPrograms.length === 0" class="no-saved-message justify-content-center">
-          <img align = "center" src="/public/images/saved-images/learning.png" alt="Options" class="image-saved w-75">
-          <div class="text">
-          It seems you have nothing saved, you should add a program!!
-          </div>
+          <img align="center" src="/public/images/saved-images/learning.png" alt="Options" class="image-saved w-75">
+          <div class="text">It seems you have nothing saved, you should add a program!</div>
         </b-row>
-
-
         <b-row v-else>
           <b-col md="4" v-for="(item, index) in savedPrograms" :key="index">
-            <b-card class="program" :img-src="`${baseDir}images/${item.img}`">
+            <b-card class="program clickable" @click="selectFixture(item)">
+              <b-card-img :src="`${baseDir}images/${item.img}`" alt="Program Image" top></b-card-img>
               <b-card-text>
                 <p class="name">{{ item.name }}</p>
                 <p class="description">{{ item.description }}</p>
               </b-card-text>
-              <b-button class="undo" @click="undoSave(item)">Undo</b-button>
+              <b-button class="undo" @click.stop="undoSave(item)">Undo</b-button>
             </b-card>
           </b-col>
         </b-row>
       </b-container>
     </div>
+    <b-modal v-model="showModal" id="my-modal" title="Program Details" hide-footer>
+      <div v-if="selectedFixture">
+        <h4>{{ selectedFixture.name }}</h4>
+        <vue-pdf-embed :source="`${baseDir}${selectedFixture.pdf}`"/>
+      </div>
+    </b-modal>
   </div>
 </template>
 
-
 <script>
+import VuePdfEmbed from 'vue-pdf-embed';
+import 'vue-pdf-embed/dist/style/index.css';
+
 export default {
+  components: {
+    VuePdfEmbed
+  },
   data() {
     return {
-      savedPrograms: []
+      savedPrograms: [],
+      selectedFixture: null,
+      showModal: false
     };
   },
   methods: {
@@ -41,7 +51,11 @@ export default {
         this.savedPrograms.splice(index, 1);
         localStorage.setItem('savedPrograms', JSON.stringify(this.savedPrograms));
       }
-    }
+    },
+    selectFixture(fixture) {
+      this.selectedFixture = fixture;
+      this.showModal = true;
+    },
   },
   mounted() {
     const saved = localStorage.getItem('savedPrograms');
@@ -176,6 +190,11 @@ body {
 
 .global-content-padding {
   padding-bottom: 10vw;
+}
+
+.program.clickable:hover {
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
 @media (max-width: 768px) {
