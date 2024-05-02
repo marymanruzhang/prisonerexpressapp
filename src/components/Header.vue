@@ -50,7 +50,29 @@ const prompts = [
 "How do you feel about the current chapter of your life?",
 "What is your most treasured memory?",
 "What is something you're looking forward to?",
-"What inspires you?"
+"What inspires you?",
+"What do you hope to achieve in the next year?",
+"Describe a book that has impacted your life.",
+"Write about a time when you overcame a difficult challenge.",
+"What are some things you're proud of accomplishing?",
+"Describe a place that holds special meaning to you.",
+"Write about a person you admire and why.",
+"What are your goals for after release?",
+"Describe a moment of kindness you've experienced.",
+"Write about a skill you'd like to learn or improve.",
+"What brings you peace?",
+"Describe a favorite memory from childhood.",
+"Write about a time when you helped someone else.",
+"What do you value most in relationships?",
+"Describe a personal strength you're working to develop.",
+"Write about a book or movie that inspired you.",
+"What are some things you're looking forward to doing after release?",
+"Describe a time when you took responsibility for a mistake.",
+"Write about a goal you're working towards.",
+"What do you think is the key to a happy life?",
+"Describe a moment of forgiveness or apologies that impacted your life.",
+"What are some things you're grateful for today?",
+"How do you feel about the progress you've made so far?"
 ];
 
 function toggleSidebar() {
