@@ -276,7 +276,9 @@ b-card.highlight{
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   animation: fadeIn 0.5s ease-out;
   margin-bottom: -10%;
-
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
 }
 
 .sidebar-toggle img, .settings-toggle img {
