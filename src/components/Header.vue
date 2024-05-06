@@ -419,7 +419,7 @@ color: #555;
 }
 
 .close-button {
-  margin-top: 65vh;
+  margin-top: 71vh;
   background-color: #FF6347;
 }
 

@@ -71,7 +71,6 @@ export default {
 
 body {
   font-family: "Noto Serif", serif;
-  background-color: #F0F8FF;
 }
 
 .saved-programs-container {
@@ -80,7 +79,6 @@ body {
   align-items: center;
   justify-content: center;
   padding: 20px;
-  background-color: #F0F8FF;
   min-height: 300px;
 }
 
@@ -141,7 +139,6 @@ body {
   align-items: center;
   padding: 20px;
   justify-content: center;
-  background-color: #F0F8FF;
 }
 
 .save {
@@ -243,5 +240,30 @@ body {
   .global-content-padding {
     padding-bottom: 20vw;
   }
+}
+.dark-theme {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.dark-theme .header, .dark-theme .settings-modal, .dark-theme .sidebar {
+  background-color: #333;
+  color: #ffffff;
+}
+
+.dark-theme .tile, .dark-theme .highlight {
+  background-color: #424242;
+  color: #ffffff;
+  border-color: #616161;
+}
+
+.dark-theme .tile:hover, .dark-theme .highlight:hover {
+  background-color: #535353;
+  color: #ffffff;
+  box-shadow: 0 12px 24px rgba(255, 255, 255, 0.12);
+}
+
+.dark-theme img {
+  filter: brightness(0.8);
 }
 </style>
