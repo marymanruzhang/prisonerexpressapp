@@ -54,6 +54,7 @@
         <b-carousel-slide v-for="(pdf, index) in pdfSources" :key="index" @click="selectPdf(index)"
         :img-src="imageRoutes[index]" >
           <p class = "caption"> {{ pdfNames[index]}} </p>
+          <b-button variant="light">View Newsletter</b-button>
         </b-carousel-slide>
         </b-carousel>
         <b-modal v-model="showPdfViewer" title="PDF Viewer" @hidden="closePdfViewer"> <VuePdfEmbed :source="`${baseDir}${selectedPdf}`" /> </b-modal>
