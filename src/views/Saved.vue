@@ -14,7 +14,7 @@
                 <p class="name">{{ item.name }}</p>
                 <p class="description">{{ item.description }}</p>
               </b-card-text>
-              <b-button class="undo" @click.stop="undoSave(item)">Undo</b-button>
+              <b-button class="undo" @click.stop="undoSave(item)">Unsave</b-button>
             </b-card>
           </b-col>
         </b-row>
